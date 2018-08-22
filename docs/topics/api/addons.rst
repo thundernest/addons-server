@@ -116,7 +116,7 @@ for autocomplete though, there are a couple key differences:
     :query string tag: Filter by exact tag name. Multiple tag names can be specified, separated by comma(s).
     :query string type: Filter by :ref:`add-on type <addon-detail-type>`.
     :query string sort: The sort parameter. The available parameters are documented in the :ref:`table below <addon-search-sort>`.
-    :>json array results: An array of :ref:`add-ons <addon-detail-object>`. Only the ``id``, ``icon_url``, ``name`` and ``url`` fields are supported though.
+    :>json array results: An array of :ref:`add-ons <addon-detail-object>`. Only the ``id``, ``icon_url``, ``name``, ``type`` and ``url`` fields are supported though.
 
 
 ------
@@ -264,8 +264,8 @@ This endpoint allows you to fetch a specific add-on by id, slug or guid.
 
         For backwards-compatibility reasons, the value for type of Theme
         currently live on production addons.mozilla.org is ``persona``
-        (Lightweight Theme). ``theme`` refers to a deprecated XUL Complete Theme. 
-        New webextension packaged non-dynamic themes are ``statictheme`.
+        (Lightweight Theme). ``theme`` refers to a deprecated XUL Complete Theme.
+        New webextension packaged non-dynamic themes are ``statictheme``.
 
     ==============  ==========================================================
              Value  Description

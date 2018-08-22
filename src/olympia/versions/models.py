@@ -18,7 +18,7 @@ from django_statsd.clients import statsd
 import olympia.core.logger
 
 from olympia import activity, amo
-from olympia.amo.decorators import use_master
+from olympia.amo.decorators import use_primary_db
 from olympia.amo.models import (
     BasePreview, ManagerBase, ModelBase, OnChangeMixin)
 from olympia.amo.templatetags.jinja_helpers import (
@@ -95,9 +95,6 @@ class Version(OnChangeMixin, ModelBase):
     nomination = models.DateTimeField(null=True)
     reviewed = models.DateTimeField(null=True)
 
-    has_reviewer_comment = models.BooleanField(
-        db_column='has_editor_comment', default=False)
-
     deleted = models.BooleanField(default=False)
 
     source = models.FileField(
@@ -113,6 +110,9 @@ class Version(OnChangeMixin, ModelBase):
 
     class Meta(ModelBase.Meta):
         db_table = 'versions'
+        # This is very important: please read the lengthy comment in Addon.Meta
+        # description
+        base_manager_name = 'unfiltered'
         ordering = ['-created', '-modified']
 
     def __init__(self, *args, **kwargs):
@@ -138,8 +138,7 @@ class Version(OnChangeMixin, ModelBase):
         return self
 
     @classmethod
-    def from_upload(cls, upload, addon, platforms, channel,
-                    source=None, parsed_data=None):
+    def from_upload(cls, upload, addon, platforms, channel, parsed_data=None):
         """
         Create a Version instance and corresponding File(s) from a
         FileUpload, an Addon, a list of platform ids, a channel id and the
@@ -167,7 +166,6 @@ class Version(OnChangeMixin, ModelBase):
             addon=addon,
             version=parsed_data['version'],
             license_id=license_id,
-            source=source,
             channel=channel,
         )
         log.info(
@@ -635,7 +633,8 @@ class Version(OnChangeMixin, ModelBase):
         auto_approve command."""
         return (
             self.addon.status in (amo.STATUS_PUBLIC, amo.STATUS_NOMINATED) and
-            self.addon.type in (amo.ADDON_EXTENSION, amo.ADDON_LPAPP) and
+            self.addon.type in (
+                amo.ADDON_EXTENSION, amo.ADDON_LPAPP, amo.ADDON_DICT) and
             self.is_webextension and
             self.is_unreviewed and
             self.channel == amo.RELEASE_CHANNEL_LISTED)
@@ -696,7 +695,7 @@ models.signals.post_delete.connect(VersionPreview.delete_preview_files,
                                    dispatch_uid='delete_preview_files')
 
 
-@use_master
+@use_primary_db
 def update_status(sender, instance, **kw):
     if not kw.get('raw'):
         try:
@@ -804,8 +803,8 @@ class LicenseManager(ManagerBase):
 class License(ModelBase):
     OTHER = 0
 
-    name = TranslatedField(db_column='name')
-    url = models.URLField(null=True, db_column='url')
+    name = TranslatedField()
+    url = models.URLField(null=True)
     builtin = models.PositiveIntegerField(default=OTHER)
     text = LinkifiedField()
     on_form = models.BooleanField(

@@ -33,6 +33,7 @@ from .models import GroupedRating, Rating, RatingFlag
 from .permissions import CanDeleteRatingPermission
 from .serializers import RatingSerializer, RatingSerializerReply
 from .templatetags.jinja_helpers import user_can_delete_review
+from .utils import maybe_check_with_akismet
 
 
 log = olympia.core.logger.getLogger('z.ratings')
@@ -191,6 +192,7 @@ def add(request, addon):
             not request.POST.get('detailed')):
         details = _review_details(request, addon, form)
         rating = Rating.objects.create(**details)
+        maybe_check_with_akismet(request, rating, None)
         if 'flag' in form.cleaned_data and form.cleaned_data['flag']:
             rf = RatingFlag(rating=rating,
                             user_id=request.user.id,
@@ -213,6 +215,7 @@ def edit(request, addon, review_id):
     cls = forms.RatingReplyForm if rating.reply_to else forms.RatingForm
     form = cls(request.POST)
     if form.is_valid():
+        pre_save_body = rating.body
         data = _review_details(request, addon, form, create=False)
         for field, value in data.items():
             setattr(rating, field, value)
@@ -220,6 +223,7 @@ def edit(request, addon, review_id):
         # doesn't work with extra fields that are not meant to be saved like
         # 'user_responsible'.
         rating.save()
+        maybe_check_with_akismet(request, rating, pre_save_body)
         return {}
     else:
         return json_view.error(form.errors)
@@ -423,12 +427,12 @@ class RatingViewSet(AddonChildMixin, ModelViewSet):
         if 'without_empty_body' in requested:
             queryset = queryset.filter(~Q(body=None) | user_filter)
 
-        # The serializer needs reply, version (only the "version" field) and
-        # user. We don't need much for version and user, so we can make joins
-        # with select_related(), but for replies additional queries will be
-        # made for translations anyway so we're better off using
-        # prefetch_related() to make a separate query to fetch them all.
-        queryset = queryset.select_related('version__version', 'user')
+        # The serializer needs reply, version and user. We don't need much
+        # for version and user, so we can make joins with select_related(),
+        # but for replies additional queries will be made for translations
+        # anyway so we're better off using prefetch_related() to make a
+        # separate query to fetch them all.
+        queryset = queryset.select_related('version', 'user')
         replies_qs = Rating.unfiltered.select_related('user')
         return queryset.prefetch_related(
             Prefetch('reply', queryset=replies_qs))

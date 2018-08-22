@@ -1,10 +1,10 @@
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-21 06:01+0000\n"
-"PO-Revision-Date: 2018-06-04 08:23+0000\n"
+"POT-Creation-Date: 2018-08-14 15:24+0000\n"
+"PO-Revision-Date: 2018-08-21 11:18+0000\n"
 "Last-Translator: Håvar Henriksen <havar@firefox.no>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nb_NO\n"
@@ -26,9 +26,8 @@ msgstr "Et problem oppstod ved forsøk på å kontakte serveren."
 msgid "Select a file..."
 msgstr "Velg fil ..."
 
-#, fuzzy
 msgid "Your add-on should end with .zip, .xpi, .crx, .jar or .xml"
-msgstr "Utvidelsen må ende på .xpi, .jar eller .xml"
+msgstr "Utvidelsen må ende på .zip, .xpi, .crx, .jar eller .xml"
 
 #. L10n: {0} is the percent of the file that has been uploaded.
 #, python-format
@@ -103,12 +102,13 @@ msgstr "WebExtension-oppgradering"
 
 msgid "We allow and encourage an upgrade but you cannot reverse this process. Once your users have the WebExtension installed, they will not be able to install a legacy add-on."
 msgstr ""
+"Vi tillater og oppmuntrer en oppgradering, men du kan ikke reversere denne prosessen. Når dine brukere har WebExtension installert, vill de ikke være i stand til å installere en foreldet utvidelse."
 
 msgid "Porting a legacy Firefox add-on on MDN"
 msgstr "Konverter en gammel Firefox-utvidelse på MDN"
 
 msgid "Include detailed version notes (this can be done in the next step)."
-msgstr ""
+msgstr "Inkluder detaljerte versjonsmerkander (dette kan gjøres i det neste steget)."
 
 msgid "If your add-on requires an account to a website in order to be fully tested, include a test username and password in the Notes to Reviewer (this can be done in the next step)."
 msgstr "Hvis din utvidelse krever en konto på et nettsted for å kunne bli ordentlig testet, legg med et brukernavn og passord i notatene for anmelderen (dette kan bli gjort i det neste trinnet)."
@@ -673,9 +673,8 @@ msgstr "Vis andre versjoner"
 msgid "Works with {app} {min} - {max}"
 msgstr "Virker med {app} {min} - {max}"
 
-#, fuzzy
 msgid "Works with {app}"
-msgstr "Virker med {app} {min} - {max}"
+msgstr "Fungerer med {app}"
 
 msgid "Only with Firefox — Get Firefox Now!"
 msgstr "Kun for Firefox — Last ned Firefox nå!"
@@ -814,7 +813,7 @@ msgid "Approved"
 msgstr "Godkjent"
 
 msgid "No results found"
-msgstr ""
+msgstr "Ingen resultat"
 
 msgid "Theme"
 msgstr "Tema"
@@ -843,9 +842,8 @@ msgstr "Advarsel"
 msgid "{0} line {1} column {2}"
 msgstr "{0} linje {1} kolonne {2}"
 
-#, fuzzy
 msgid "{0} line {1}"
-msgstr "{0} av {1}"
+msgstr "{0} linje {1}"
 
 msgid "Compatibility Tests"
 msgstr "Kompatibilitetstester"

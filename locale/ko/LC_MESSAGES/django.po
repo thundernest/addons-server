@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: addons-ko\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-21 06:01+0000\n"
-"PO-Revision-Date: 2018-06-29 01:04+0000\n"
+"POT-Creation-Date: 2018-08-14 15:24+0000\n"
+"PO-Revision-Date: 2018-08-21 02:06+0000\n"
 "Last-Translator: Hyeonseok Shin <hyeonseok@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ko\n"
@@ -75,6 +75,9 @@ msgstr "심사 노트"
 
 msgid "Only latest versions of addons can have notes added."
 msgstr "오직 최신 버젼의 부가 기능만 노트를 추가할 수 있습니다."
+
+msgid "Status"
+msgstr "상태"
 
 msgid "- Add-on not on AMO -"
 msgstr ""
@@ -188,9 +191,8 @@ msgstr "개인 정보 보호 정책 보기"
 msgid "View End-User License Agreement"
 msgstr "일반 사용자 계약서 보기"
 
-#, fuzzy
 msgid "This add-on has not been reviewed by Mozilla."
-msgstr "이 부가 기능은 아직 심사를 거치지 않았습니다."
+msgstr "이 부가 기능은 아직 Mozilla의 심사를 거치지 않았습니다."
 
 msgid "This add-on has been marked as experimental by its developers."
 msgstr "이 부가 기능은 제작자에 의해 실험적인 부가 기능으로 표시되었습니다."
@@ -688,11 +690,24 @@ msgstr "#000000 처럼 올바른 16진수 색상 코드를 입력해야 합니�
 msgid "Not allowed"
 msgstr "허가 안됨"
 
-msgid "<h1>Oops! Not allowed.</h1> <p>You tried to do something that you weren't allowed to.</p>"
-msgstr "<h1>이런! 허용되지 않은 작업입니다.</h1> <p>허용되지 않은 작업을 시도하셨습니다.</p>"
+msgid "Oops! Not allowed."
+msgstr "이런! 허가되지 않았습니다."
 
-msgid "<p>Try going back to the previous page, refreshing and then trying again.</p>"
-msgstr "<p>이전 페이지로 돌아가려고 하고 있습니다. 새로고침 한 다음 다시 시도해 주세요.</p>"
+msgid "You tried to do something that you weren't allowed to."
+msgstr "허가되지 않은 작업을 시도했습니다."
+
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer header' to be sent by your Web browser, but none was sent. This header is required for security reasons, to ensure that your "
+"browser is not being hijacked by third parties."
+msgstr ""
+
+msgid "If you have configured your browser to disable 'Referer' headers, please re-enable them, at least for this site, or for HTTPS connections, or for 'same-origin' requests."
+msgstr ""
+
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when submitting forms. This cookie is required for security reasons, to ensure that your browser is not being hijacked by third "
+"parties."
+msgstr ""
 
 msgid "Page Not Found"
 msgstr "페이지가 없습니다"
@@ -712,9 +727,8 @@ msgstr "모든 확장 기능 탐색하기"
 msgid "Browse all themes"
 msgstr "모든 테마 탐색하기"
 
-#, fuzzy
 msgid "Add-ons Home Page"
-msgstr "부가 기능 홈페이지"
+msgstr "부가 기능 홈 페이지"
 
 #, python-format
 msgid "If you followed a link from somewhere, please %(open_bug_link)sfile an issue%(close_bug_link)s. Tell us where you came from and what you were looking for, and we'll do our best to fix it."
@@ -723,7 +737,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "찾을 수 없습니다."
 
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "<h1>We're sorry, but we can't find what you're looking for.</h1> <p> The page or file you requested wasn't found on our site. It's possible that you clicked a link that's out of date, or typed in "
 "the address incorrectly. </p> <ul> <li>If you typed in the address, please double check the spelling.</li> <li> If you followed a link from somewhere, please <a href=\"https://github.com/mozilla"
@@ -732,16 +746,16 @@ msgid ""
 "go to the <a href=\"%(search)s\">search page</a> or just use the search field above. </li> <li> If you prefer to start over, just go to the <a href=\"%(home)s\">add-ons front page</a>. </li> </ul>"
 msgstr ""
 "<h1>죄송합니다. 현재 찾으시는 것을 발견하지 못했습니다.</h1> <p> 찾고자 하시는 페이지나 파일은 저희 사이트 내에 없었습니다. 너무 오래된 링크를 클릭했거나 주소를 정확히 입력하지 않았을 수도 있습니다. </p> <ul> <li>주소를 입력하신 거였다면 주소 철자를 다시 한번 점검해 보시기 바랍니다.</li> <li> 다른 사이트에 올라온 "
-"링크를 따라서 오신 거라면 <a href=\"mailto:webmaster@mozilla.com\">webmaster@mozilla.com 주소를 통해 저희에게 연락해 주십시오</a>. 사이트의 이름과 어떤 것을 찾고 있었는지 말씀해 주시면 저희가 최선을 다해 수정하도록 하겠습니다. </li> </ul> <p>저희 웹사이트의 인기 페이지로 가보시는 것도"
-" 권해드립니다.</p> <ul> <li><a href=\"%(rec)s\">추천 부가 기능 목록</a>에 관심이 있으십니까?</li> <li> <a href=\"%(search)s\">부가 기능을 검색</a>하고 싶으신가요? <a href=\"%(search)s\">검색 페이지</a>로 이동하시거나 윗부분의 검색창을 사용하셔도 됩니다. </li>  "
-"<li> 첫 페이지로 가서 다시 시작하고자 하신다면 <a href=\"%(home)s\">부가 기능 첫 페이지</a>로 이동하시기 바랍니다. </li> </ul>"
+"링크를 따라서 오신 거라면 <a href=\"https://github.com/mozilla/addons-server/issues/new/\">이슈 등록</a>을 부탁드립니다. 사이트의 이름과 어떤 것을 찾고 있었는지 말씀해 주시면 저희가 최선을 다해 수정하도록 하겠습니다. </li> </ul> <p>저희 웹사이트의 인기 페이지로 가보시는 것도 "
+"권해드립니다.</p> <ul> <li><a href=\"%(rec)s\">추천 부가 기능 목록</a>에 관심이 있으십니까?</li> <li> <a href=\"%(search)s\">부가 기능을 검색</a>하고 싶으신가요? <a href=\"%(search)s\">검색 페이지</a>로 이동하시거나 윗부분의 검색창을 사용하셔도 됩니다. </li> <li>"
+" 첫 페이지로 가서 다시 시작하고자 하신다면 <a href=\"%(home)s\">부가 기능 첫 페이지</a>로 이동하시기 바랍니다. </li> </ul>"
 
 msgid "Oops"
 msgstr "앗 이런"
 
-#, fuzzy, python-format
+#, python-format
 msgid "<h1>Oops!  We had an error.</h1> <p>We'll get to fixing that soon.</p> <p> You can try refreshing the page, or head back to the <a href=\"%(home)s\">Add-ons homepage</a>. </p>"
-msgstr "<h1>저런! 오류가 발생했습니다.</h1> <p>빠른 시일 내에 고치도록 하겠습니다.</p> <p> 현재 페이지를 새로고침해 보시거나 <a href=\"%(home)s\">부가 기능 대문</a>으로 돌아가시기 바랍니다. </p>"
+msgstr "<h1>저런!  오류가 발생했습니다.</h1> <p>빠른 시일 내에 고치도록 하겠습니다.</p> <p>현재 페이지를 새로고침해 보거나 <a href=\"%(home)s\">부가 기능 홈페이지</a>로 돌아가시기 바랍니다.</p>"
 
 msgid "Some rights reserved"
 msgstr "Some rights reserved"
@@ -807,9 +821,6 @@ msgstr "모음집"
 
 msgid "Collections I've Made"
 msgstr "내가 만든 모음집"
-
-msgid "Collections I'm Following"
-msgstr "팔로우 중인 모음집"
 
 msgid "My Favorite Add-ons"
 msgstr "좋아하는 부가 기능"
@@ -886,6 +897,9 @@ msgstr "적어도 {num} 자 이상 되어야 합니다."
 msgid "The language code {lang_code} is invalid."
 msgstr "언어 코드 {lang_code}가 유효하지 않습니다."
 
+msgid "You must provide an object of {lang-code:value}."
+msgstr ""
+
 #, python-format
 msgid "Invalid pk or slug \"%s\" - object does not exist."
 msgstr ""
@@ -902,9 +916,9 @@ msgstr "올바른 애플리케이션 버전"
 msgid "Add-ons submitted to Mozilla Add-ons must have a manifest file with at least one of the below applications supported. Only the versions listed below are allowed for these applications."
 msgstr "모질라 부가 기능에 제출할 부가 기능은 아래 지원하는 어플리케이션들 중 적어도 하나의 매니페스트 파일을 가져야 합니다. 아래에 나열된 매니페스트 버전들만을 어플리케이션이 허용합니다."
 
-#, fuzzy, python-format
+#, python-format
 msgid "Please be aware that WebExtensions will not accept a \"*\" in %(amo_version_link_open)sstrict_min_version%(amo_version_link_close)s."
-msgstr "WebExtensions 는 <a href=\"%(version_url)s\">strict_min_version</a> 안에 \"*\" 문자를 허용하지 않음을 주의해 주십시오."
+msgstr "WebExtensions는 %(amo_version_link_open)sstrict_min_version%(amo_version_link_close)s 안에 \"*\" 문자를 허용하지 않음을 주의해 주십시오."
 
 msgid "GUID"
 msgstr "GUID"
@@ -912,11 +926,11 @@ msgstr "GUID"
 msgid "Versions"
 msgstr "버전"
 
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If your supported application does not require a manifest file, you still must include one with the required properties as specified "
 "%(amo_manifests_mdn_link_open)shere%(amo_manifests_mdn_link_close)s."
-msgstr "지원되는 애플리케이션이 매니페스트 파일을 요구하지 않으면, <a href=\"%(url)s\">이곳</a>에 명시된 요구 항목을 반드시 포함하고 있어야 합니다."
+msgstr "지원되는 애플리케이션이 매니페스트 파일을 요구하지 않으면, %(amo_manifests_mdn_link_open)s이곳%(amo_manifests_mdn_link_close)s에 명시된 요구 항목을 반드시 포함하고 있어야 합니다."
 
 msgid "Only I can view this collection."
 msgstr "자기 자신만 이 모음집을 볼 수 있습니다."
@@ -954,25 +968,20 @@ msgstr "아이콘은 반드시 PNG나 JPG 형식이어야 합니다."
 msgid "Icons cannot be animated."
 msgstr "움직이는 아이콘은 사용할 수 없습니다."
 
-#, fuzzy
 msgid "This custom URL is already in use by another one of your collections."
-msgstr "이 url은 이미 다른 모음집에서 사용중입니다"
+msgstr "이 URL은 이미 다른 모음집에서 사용중입니다."
 
-#, fuzzy
 msgid "Name cannot be empty."
-msgstr "이 이름은 사용할 수 없습니다."
+msgstr "이름은 비워둘 수 없습니다."
 
-#, fuzzy
 msgid "The custom URL must consist of letters, numbers, underscores or hyphens."
-msgstr "문자, 숫자, 밑줄, 하이픈으로 이루어진 올바른 사용자 이름을 입력하세요."
+msgstr "문자, 숫자, 밑줄, 하이픈으로 이루어진 URL을 입력하세요."
 
-#, fuzzy
 msgid "This custom URL cannot be used."
-msgstr "이 사용자 이름은 사용할 수 없습니다."
+msgstr "이 URL은 사용할 수 없습니다."
 
-#, fuzzy
 msgid "This add-on already belongs to the collection"
-msgstr "이 url은 이미 다른 모음집에서 사용중입니다"
+msgstr "이 부가 기능은 이미 다른 모음집에서 사용중입니다"
 
 msgid "Added"
 msgstr "신규"
@@ -1028,27 +1037,11 @@ msgstr "(선택사항)"
 msgid "or <a id=\"collections-new-cancel\" href=\"#\">Cancel</a>"
 msgstr "또는 <a id=\"collections-new-cancel\" href=\"#\">취소</a>"
 
-#. Link to remove a collection vote
-msgid "To rate collections, you must have an add-ons account."
-msgstr "모음집을 평가하려면 부가 기능 계정이 있어야 합니다."
-
-msgid "Create an Add-ons Account"
-msgstr "부가 기능 계정 만들기"
-
-#, python-format
-msgid "or <a href=\"%(login)s\">log in to your current account</a>"
-msgstr "아니면 <a href=\"%(login)s\">현재 사용중인 계정으로 로그인</a> 하세요"
-
 msgid "{0} :: Collections"
 msgstr "{0} :: 모음집"
 
 msgid "private"
 msgstr "비공개"
-
-#, python-format
-msgid "<span>%(num)s</span> follower"
-msgid_plural "<span>%(num)s</span> followers"
-msgstr[0] "팔로워 <span>%(num)s</span>명"
 
 msgid "About this Collection"
 msgstr "모음집 소개"
@@ -1101,11 +1094,10 @@ msgid ""
 "from public view, click the button below to make it private."
 msgstr "아래의 <b>선호 목록에 추가하기</b>를 선택하면 해당 부가 기능은 좋아하는 부가 기능으로 표시가 됩니다. 이 목록은 현재 <b>공개</b> 상태로, 모든 사람들이 목록을 볼 수 있다는 의미입니다. 남에게 보이고 싶지 않다면 아래의 버튼을 클릭해서 비공개 상태로 전환하시기 바랍니다."
 
-#, fuzzy
 msgid ""
 "Add-ons that you mark as favorites using the <b>Add to Favorites</b> feature appear below. This collection is currently <b>private</b>, which means only you can see it. If you would like everyone to"
 " be able to see your favorites, click the button below to make it public."
-msgstr "아래의 <b>선호 목록에 추가하기</b>를 선택하면 해당 부가 기능은 좋아하는 부가 기능으로 표시가 됩니다. 이 목록은 현재 <b>비공개</b> 상태로, 자기 자신만 볼 수 있다는 의미입니다. 다른 사람들도 내 선호 목록을 보게 하고 싶다면 아래의 버튼을 클릭해서 공개 상태로 전환하시기 바랍니다."
+msgstr "<b>선호 목록에 추가하기</b> 기능을 사용해 선호 하는것으로 표시한 부가 기능은 아래에 나타납니다. 이 모음집은 현재 <b>비공개</b> 상태로, 자기 자신만 볼 수 있습니다. 다른 사람들도 내 선호 목록을 보게 하고 싶다면 아래의 버튼을 클릭해서 공개 상태로 전환하시기 바랍니다."
 
 msgid "My favorite add-ons"
 msgstr "좋아하는 부가 기능"
@@ -1115,44 +1107,8 @@ msgid "<span>%(addons)s</span> add-on"
 msgid_plural "<span>%(addons)s</span> add-ons"
 msgstr[0] "부가 기능 <span>%(addons)s</span>개"
 
-#, python-format
-msgid "<span>%(followers)s</span> follower"
-msgid_plural "<span>%(followers)s</span> followers"
-msgstr[0] "팔로워 <span>%(followers)s</span>명"
-
-#. People "follow" collections to get notified of updates.                    Like
-#. Twitter followers.
-#. People "follow" collections to get notified of updates.
-#. Like Twitter followers.
-#, python-format
-msgid "%(num)s weekly follower"
-msgid_plural "%(num)s weekly followers"
-msgstr[0] "주간 팔로워 %(num)s명"
-
-#. People "follow" collections to get notified of updates.                    Like
-#. Twitter followers.
-#, python-format
-msgid "%(num)s monthly follower"
-msgid_plural "%(num)s monthly followers"
-msgstr[0] "월간 팔로워 %(num)s명"
-
-#. People "follow" collections to get notified of updates.                    Like
-#. Twitter followers.
-#. People "follow" collections to get notified of updates.
-#. Like Twitter followers.
-#, python-format
-msgid "%(num)s follower"
-msgid_plural "%(num)s followers"
-msgstr[0] "팔로워 %(num)s명"
-
 msgid "by {0}"
 msgstr "제작: {0}"
-
-msgid "Stop Following"
-msgstr "팔로윙 중단"
-
-msgid "Follow this Collection"
-msgstr "이 모음집 팔로우 하기"
 
 msgid "Edit this Collection"
 msgstr "모음집 편집하기"
@@ -1197,12 +1153,9 @@ msgstr "모음집이 없습니다."
 msgid "Collections are groups of related add-ons that anyone can create and share. Explore collections created by other users or <a href=\"%(url)s\">create your own</a>."
 msgstr "모음집은 서로 관련이 있는 부가 기능을 한데 엮어놓은 것으로 누구나 제작과 공유가 가능합니다. 다른 사용자가 제작한 모음집을 살펴보거나 <a href=\"%(url)s\">나만의 모음집을 제작</a>할 수도 있습니다."
 
-#, fuzzy, python-format
+#, python-format
 msgid "by %(author_link)s"
-msgstr "제작: %(users)s"
-
-msgid "Following"
-msgstr "팔로윙"
+msgstr "제작: %(author_link)s"
 
 msgid "Create a Collection"
 msgstr "모음집 제작하기"
@@ -1216,13 +1169,11 @@ msgstr "모음집 아이콘"
 msgid "Reset"
 msgstr "초기화"
 
-#, fuzzy
 msgid "PNG and JPG supported.  Image will be resized to 32x32."
-msgstr "PNG와 JPG 형식을 지원합니다. 이미지는 32x32 크기로 재조정될 것입니다."
+msgstr "PNG와 JPG 형식을 지원합니다.  이미지는 32x32 크기로 재조정될 것입니다."
 
-#, fuzzy
 msgid "There are errors in this form.  Please correct them below."
-msgstr "양식에 오류가 있습니다. 아래 사항을 정정해 주세요."
+msgstr "양식에 오류가 있습니다.  아래 사항을 정정해 주세요."
 
 msgid "Add-ons in Your Collection"
 msgstr "모음집에 들어있는 부가 기능"
@@ -1253,18 +1204,6 @@ msgstr "코멘트 작성"
 
 msgid "Remove this add-on from the collection"
 msgstr "모음집에서 부가 기능 삭제하기"
-
-msgid "Add a positive vote for this collection"
-msgstr "이 모음집 추천하기"
-
-msgid "Add a negative vote for this collection"
-msgstr "이 모음집 비추천하기"
-
-msgid "Remove my vote for this collection"
-msgstr "이 모음집에서 내 표 삭제하기"
-
-msgid "Log in to vote for this collection"
-msgstr "이 모음집에 투표하려면 로그인 하세요."
 
 msgid "Favorite"
 msgstr "선호 목록"
@@ -1402,9 +1341,8 @@ msgid "Additional Resources"
 msgstr "부가 정보"
 
 #. {0} is an app name, like Firefox.
-#, fuzzy
 msgid "Learn more about the <a href=\"https://support.mozilla.org/kb/use-search-bar-firefox\">search bar</a> in {0}"
-msgstr "{0}의 <a href=\"http://support.mozilla.com/kb/Search+bar\">검색 바</a>에 대해 더 알아보기"
+msgstr "{0}의 <a href=\"https://support.mozilla.org/kb/use-search-bar-firefox\">검색 바</a>에 대해 더 알아보기"
 
 msgid "Browse through even more search providers at <a href=\"http://mycroftproject.com/\">mycroftproject.com</a>"
 msgstr "<a href=\"http://mycroftproject.com/\">mycroftproject.com</a>에서 더 많은 검색 도구를 찾아보실 수 있습니다"
@@ -1556,7 +1494,6 @@ msgstr "제보 종류"
 msgid "Version"
 msgstr "버전"
 
-#, fuzzy
 msgid "Application Version"
 msgstr "애플리케이션 버전"
 
@@ -1566,13 +1503,11 @@ msgstr "애플리케이션 빌드"
 msgid "Platform"
 msgstr "플랫폼"
 
-#, fuzzy
 msgid "e10s Enabled"
-msgstr "사용 안함"
+msgstr "e10s 사용"
 
-#, fuzzy
 msgid "e10s Compatible"
-msgstr "미완료"
+msgstr "e10s 호환"
 
 msgid "Submitted"
 msgstr "등록 완료"
@@ -1615,9 +1550,8 @@ msgid "{addon} enabled."
 msgstr "{addon}이(가) 사용 가능합니다."
 
 #. L10n: {status} is the status
-#, fuzzy
 msgid "{addon} status changed to {status}."
-msgstr "{addon}의 상태가 {0}(으)로 변경되었습니다."
+msgstr "{addon}이 {status} 상태로 변경되었습니다."
 
 msgid "{version} added to {addon}."
 msgstr "{addon}에 {version} 버전이 추가되었습니다."
@@ -1682,9 +1616,8 @@ msgstr "부가 기능이 관리자 검토를 위해 마크되었습니다.  저�
 msgid "Comment on {addon} {version}."
 msgstr "{addon} {version}에 코멘트가 달렸습니다."
 
-#, fuzzy
 msgid "Commented"
-msgstr "코멘트"
+msgstr "코멘트됨"
 
 msgid "{tag} added to {addon}."
 msgstr "{addon}에 {tag} 태그가 추가되었습니다."
@@ -1698,9 +1631,8 @@ msgstr "{addon}이(가) {collection}에 추가되었습니다."
 msgid "{addon} removed from {collection}."
 msgstr "{addon}이(가) {collection}에 삭제되었습니다."
 
-#, fuzzy
 msgid "{rating} for {addon} written."
-msgstr "{addon}에 {review} 평가가 작성되었습니다."
+msgstr "{addon}에 {rating} 평가가 작성되었습니다."
 
 #. L10n: {0} is a category name.
 msgid "{addon} featured in {0}."
@@ -1724,9 +1656,8 @@ msgstr "{0} {1}이(가) 추가되었습니다."
 msgid "{0.name} role changed to {1} for {addon}."
 msgstr "{addon}에서 {0.name}님의 역할이 {1}(으)로 변경되었습니다."
 
-#, fuzzy
 msgid "{addon} is now licensed under {0}."
-msgstr "{addon}이(가) {0.name} 라이선스를 채용했습니다."
+msgstr "{addon} 부가기능이 {0} 라이선스를 채용했습니다."
 
 msgid "{addon} policy changed."
 msgstr "{addon}의 개인 정보 보호 정책이 변경되었습니다."
@@ -1734,21 +1665,17 @@ msgstr "{addon}의 개인 정보 보호 정책이 변경되었습니다."
 msgid "{addon} icon changed."
 msgstr "{addon} 아이콘이 변경되었습니다."
 
-#, fuzzy
 msgid "{rating} for {addon} approved."
-msgstr "{addon}의 {review}가 승인되었습니다."
+msgstr "{addon}의 {rating} 평가가 승인되었습니다."
 
-#, fuzzy
 msgid "{user} approved {rating} for {addon}."
-msgstr "{user}님이 {addon}의 {review}를 승인했습니다."
+msgstr "{user}님이 {addon}의 {rating} 평가를 승인했습니다."
 
-#, fuzzy
 msgid "Review {rating} for {addon} deleted."
-msgstr "{addon}의 삭제를 위해 {review}를 검토해 주십시오."
+msgstr "{addon}의 삭제를 위해 {rating} 평가를 검토해 주십시오."
 
-#, fuzzy
 msgid "{user} deleted {rating} for {addon}."
-msgstr "{user} 님이 {addon}의 {review}를 제거하였습니다."
+msgstr "{user} 님이 {addon}의 {rating} 평가를 제거하였습니다."
 
 msgid "Application max version for {version} updated."
 msgstr "애플리케이션 최신 버전인 {version} 버전으로 업데이트 되었습니다."
@@ -1792,18 +1719,23 @@ msgstr "사용자 {user}님은 이용이 제한되고 있습니다."
 msgid "Admin {0} viewed activity log for {user}."
 msgstr "관리자 {0}님이 {user}님의 활동 내역을 조회했습니다."
 
-#, fuzzy
 msgid "{rating} for {addon} updated."
-msgstr "{addon}의 {review}이(가) 업데이트됐습니다."
+msgstr "{addon}의 {rating} 평가가 업데이트됐습니다."
 
 msgid "{addon} reviewed."
 msgstr "{addon}이(가) 심사를 받았습니다."
 
+msgid "User {user} banned."
+msgstr "{user} 사용자가 차단되었습니다."
+
+msgid "User {user} picture deleted."
+msgstr "{user} 사용자의 사진이 삭제되었습니다."
+
 msgid "User {0.name} added to {group}."
-msgstr "사용자 {0.name}님이 {group}에 추가됐습니다."
+msgstr "{0.name} 사용자가 {group}에 추가됐습니다."
 
 msgid "User {0.name} removed from {group}."
-msgstr "사용자 {0.name}님이 {group}에서 제명됐습니다."
+msgstr "{0.name} 사용자가 {group}에서 삭제됐습니다."
 
 msgid "{addon} unlisted."
 msgstr "{addon}이 목록에서 제거되었습니다."
@@ -1842,81 +1774,62 @@ msgstr "{addon} {version} 버전에 대한 소스 코드가 업로드 되었습�
 msgid "Source code uploaded"
 msgstr "소스 코드가 업로드 됨"
 
-#, fuzzy
 msgid "Auto-Approval confirmed for {addon} {version}."
-msgstr "{addon} {version}의 승인 노트가 변경되었습니다."
+msgstr "{addon} {version}의 자동 승인이 확인되었습니다."
 
-#, fuzzy
 msgid "Auto-Approval confirmed"
-msgstr "승인 상태"
+msgstr "자동 승인 확인"
 
-#, fuzzy
 msgid "{addon} {version} re-enabled."
-msgstr "{addon} {version}이(가) 심사 거부 되었습니다."
+msgstr "{addon} {version} 버전이 다시 활성화 되었습니다."
 
-#, fuzzy
 msgid "{addon} {version} disabled."
-msgstr "{addon} {version}이(가) 검토 대상이 되었습니다."
+msgstr "{addon} {version} 버전이 비활성화 되었습니다."
 
-#, fuzzy
 msgid "{addon} {version} content approved."
-msgstr "{addon} {version}이(가) 승인되었습니다."
+msgstr "{addon} {version} 내용이 승인되었습니다."
 
-#, fuzzy
 msgid "Content approved"
-msgstr "이(가) 승인되었습니다"
+msgstr "내용이 승인됨"
 
-#, fuzzy
 msgid "{addon} {version} content rejected."
-msgstr "{addon} {version}이(가) 심사 거부 되었습니다."
+msgstr "{addon} {version} 내용이 거부 되었습니다."
 
-#, fuzzy
 msgid "Content rejected"
-msgstr "이(가) 심사 거부되었습니다"
+msgstr "내용이 거부됨"
 
-#, fuzzy
 msgid "{addon} information request altered or removed by admin."
-msgstr "추가 정보 필요"
+msgstr "관리자에 의해 {addon} 정보 요청이 변경되거나 삭제되었습니다."
 
-#, fuzzy
 msgid "Information request altered"
-msgstr "추가 정보 필요"
+msgstr "정보 요청 변경됨"
 
-#, fuzzy
 msgid "Information request cleared by developer on {addon} {version}."
-msgstr "{addon} {version}에 개발자의 코멘트가 달렸습니다."
+msgstr "{addon} {version}에 정보 요청이 개발자에 의해 삭제되었습니다."
 
-#, fuzzy
 msgid "Information request removed"
-msgstr "추가 정보 필요"
+msgstr "정보 요청 삭제됨"
 
-#, fuzzy
 msgid "{addon} {version} admin add-on-review requested."
-msgstr "{addon} {version}의 심사가 요청되었습니다."
+msgstr "{addon} {version}의 관리자 부가 기능 심사가 요청되었습니다."
 
-#, fuzzy
 msgid "Admin add-on-review requested"
-msgstr "상급 심사 요청됨"
+msgstr "관리자 부가 기능 심사 요청됨"
 
-#, fuzzy
 msgid "{addon} {version} admin content-review requested."
-msgstr "{addon} {version}의 심사가 요청되었습니다."
+msgstr "{addon} {version}의 관리자 내용 심사가 요청되었습니다."
 
-#, fuzzy
 msgid "Admin content-review requested"
-msgstr "상급 심사 요청됨"
+msgstr "관리자 내용 심사 요청됨"
 
-#, fuzzy
 msgid "{addon} {version} admin theme-review requested."
-msgstr "{addon} {version}의 심사가 요청되었습니다."
+msgstr "{addon} {version}의 관리자 테마 심사가 요청되었습니다."
 
-#, fuzzy
 msgid "Admin theme-review requested"
-msgstr "심사 요청됨"
+msgstr "관리자 테마 심사 요청됨"
 
-#, fuzzy
 msgid "{addon} was migrated from a lightweight theme."
-msgstr "{addon} 이 예비 심사 등급으로부터 마이그레이션 되었습니다."
+msgstr "{addon} 부가 기능이 가벼운 테마에서 마이그레이션 되었습니다."
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -1988,9 +1901,8 @@ msgstr "플러그인"
 msgid "Theme"
 msgstr "테마"
 
-#, fuzzy
 msgid "Theme (Static)"
-msgstr "테마 상세 정보"
+msgstr "테마(정적)"
 
 msgid "Complete Themes"
 msgstr "완전 테마"
@@ -2009,9 +1921,8 @@ msgstr "언어팩(부가 기능)"
 msgid "Plugins"
 msgstr "플러그인"
 
-#, fuzzy
 msgid "Themes (Static)"
-msgstr "테마 제작자"
+msgstr "테마(정적)"
 
 #. Review points sources other than add-ons and themes.
 msgid "Other"
@@ -2170,9 +2081,8 @@ msgstr "위치 기반"
 msgid "Experimental"
 msgstr "테스트용"
 
-#, fuzzy
 msgid "Feeds, News, & Blogging"
-msgstr "RSS 뉴스 및 블로그"
+msgstr "피드, 뉴스 및 블로그"
 
 msgid "Performance"
 msgstr "성능"
@@ -2192,31 +2102,26 @@ msgstr "스포츠 및 게임"
 msgid "User Interface"
 msgstr "시용자 인터페이스"
 
-#, fuzzy
 msgid "Appearance and Customization"
-msgstr "맞춤형 디자인"
+msgstr "모양 및 사용자 지정"
 
-#, fuzzy
 msgid "Calendar and Date/Time"
-msgstr "일정 기능"
+msgstr "달력과 날짜/시간"
 
 msgid "Chat and IM"
 msgstr "채팅과 메신저"
 
-#, fuzzy
 msgid "Message Composition"
-msgstr "기부하기"
+msgstr "메시지 작성"
 
 msgid "Contacts"
 msgstr "연락처"
 
-#, fuzzy
 msgid "Folders and Filters"
-msgstr "모음집 및 선호 목록"
+msgstr "폴더 및 필터"
 
-#, fuzzy
 msgid "Import/Export"
-msgstr "내보내기"
+msgstr "가져오기/내보내기"
 
 msgid "Message and News Reading"
 msgstr "메일 읽기"
@@ -2290,19 +2195,29 @@ msgstr "Solaris"
 msgid "Android"
 msgstr "안드로이드"
 
-#, fuzzy
 msgid "Static Theme"
-msgstr "테마 제출"
+msgstr "정적 테마"
 
 msgid "Persona"
 msgstr "페르소나"
 
+msgid "No Reputation"
+msgstr "평판 없음"
+
+msgid "Good (1)"
+msgstr ""
+
+msgid "Very Good (2)"
+msgstr ""
+
+msgid "Excellent (3)"
+msgstr ""
+
 msgid "Manual Reviewer Points"
 msgstr "수동 심사 포인트"
 
-#, fuzzy
 msgid "New Add-on Review"
-msgstr "부가 기능 전체 심사"
+msgstr "새로운 부가 기능 심사"
 
 msgid "Preliminary Add-on Review"
 msgstr "부가 기능 예비 심사"
@@ -2310,9 +2225,8 @@ msgstr "부가 기능 예비 심사"
 msgid "Updated Add-on Review"
 msgstr "업데이트된 부가 기능 심사"
 
-#, fuzzy
 msgid "New Dictionary Review"
-msgstr "사전 전체 심사"
+msgstr "새 사전 심사"
 
 msgid "Preliminary Dictionary Review"
 msgstr "사전 예비 심사"
@@ -2320,9 +2234,8 @@ msgstr "사전 예비 심사"
 msgid "Updated Dictionary Review"
 msgstr "업데이트된 사전 심사"
 
-#, fuzzy
 msgid "New Language Pack Review"
-msgstr "언어팩 전체 심사"
+msgstr "새 언어팩 심사"
 
 msgid "Preliminary Language Pack Review"
 msgstr "언어팩 예비 심사"
@@ -2333,13 +2246,11 @@ msgstr "업데이트된 언어팩 심사"
 msgid "Theme Review"
 msgstr "테마 심사"
 
-#, fuzzy
 msgid "Theme (Static) Review"
-msgstr "테마 상세 정보"
+msgstr "테마(정적) 검토"
 
-#, fuzzy
 msgid "New Search Provider Review"
-msgstr "검색 도구 전체 심사"
+msgstr "새 검색 도구 심사"
 
 msgid "Preliminary Search Provider Review"
 msgstr "검색 도구 예비 심사"
@@ -2347,9 +2258,8 @@ msgstr "검색 도구 예비 심사"
 msgid "Updated Search Provider Review"
 msgstr "업데이트된 검색 도구 심사"
 
-#, fuzzy
 msgid "New Complete Theme Review"
-msgstr "완전 테마 심사"
+msgstr "새 완전 테마 심사"
 
 msgid "Preliminary Complete Theme Review"
 msgstr "예비 완전 테마 심사"
@@ -2516,25 +2426,26 @@ msgstr "업로드 도중 오류가 있었습니다. 다시 해주세요."
 msgid "Override failed validation"
 msgstr "Override failed validation"
 
-msgid "Submit my add-on for manual review."
-msgstr "수동 심사를 위해 부가 기능을 제출합니다."
-
 msgid "You cannot upload any more files for this version."
 msgstr "이 버전엔 이이상 많은 파일을 업로드 할 수 없습니다."
 
 msgid "Version doesn't match"
 msgstr "버전이 일치하지 않습니다"
 
-#, fuzzy
 msgid "Version {version} was uploaded before and deleted."
-msgstr "버전 %s 이 이미 존재하거나, 이전에 이미 업로드되어 있습니다."
+msgstr "{version} 버전이 이전에 업로드 되고 삭제된적이 있습니다."
 
-#, fuzzy
 msgid "Version {version} already exists."
-msgstr "버전 %s 이 이미 존재하거나, 이전에 이미 업로드되어 있습니다."
+msgstr "{version} 버전이 이미 존재합니다."
 
 msgid "Continue with existing upload instead?"
 msgstr "대신 기존 업로드로 게속하십니까?"
+
+msgid "You have not uploaded a source file."
+msgstr "소스 파일을 업로드 하지 않았습니다."
+
+msgid "Source file uploaded but you indicated no source was needed."
+msgstr ""
 
 # 98%
 # 100%
@@ -2543,10 +2454,6 @@ msgstr "모든 플랫폼을 특정 플랫폼과 합칠 수는 없습니다. "
 
 msgid "A platform can only be chosen once."
 msgstr "플랫폼은 한번에 한개만 선택할 수 있습니다."
-
-#, fuzzy
-msgid "Reputation"
-msgstr "해상도"
 
 msgid "Application"
 msgstr "애플리케이션"
@@ -2565,9 +2472,8 @@ msgstr ""
 msgid "On your own. <span class=\"helptext\">Your submission will be immediately signed for self-distribution. Updates should be handled by you via an updateURL or external application updates.</span>"
 msgstr ""
 
-#, fuzzy
 msgid "Categories cannot be changed while your add-on is featured."
-msgstr "이 애플리케이션의 추천 부가 기능으로 선정되어 있는 동안은 분류를 변경할 수 없습니다."
+msgstr "추천 부가 기능으로 선정되어 있는 동안은 분류를 변경할 수 없습니다."
 
 msgid "Add-ons for Thunderbird and SeaMonkey are now listed and maintained on addons.thunderbird.net. You can use the same account to update your add-ons on the new site."
 msgstr ""
@@ -2692,9 +2598,8 @@ msgstr "%s 버전이 다시 활성화되었습니다."
 msgid "This upload has failed validation, and may lack complete validation results. Please take due care when reviewing it."
 msgstr "업로드한 파일의 검사 작업에 실패했으므로 완전한 검사 결과가 누락되었을 수 있습니다. 심사시 이점에 유의해 주세요."
 
-#, fuzzy
 msgid "Review requested."
-msgstr "심사 요청됨"
+msgstr "심사가 요청되었습니다."
 
 msgid "You must provide further details to proceed."
 msgstr ""
@@ -2949,9 +2854,8 @@ msgstr "테스트용"
 msgid "If your add-on on is experimental or otherwise not ready for general use.  The add-on will be listed but will have reduced visibility. "
 msgstr ""
 
-#, fuzzy
 msgid "This add-on is experimental."
-msgstr "이 부가 기능은 외부 소프트웨어를 필요로 합니다."
+msgstr "이 부가 기능은 테스트용입니다."
 
 #, fuzzy
 msgid "This add-on is ready for general use."
@@ -2995,9 +2899,8 @@ msgid "Reserved tag:"
 msgid_plural "Reserved tags:"
 msgstr[0] "금지 태그:"
 
-#, fuzzy
 msgid "Contributions URL"
-msgstr "기부금"
+msgstr "공헌 URL"
 
 msgid "If you would like to request monetary contributions from your users, set this to a page where they can do so."
 msgstr ""
@@ -3294,9 +3197,8 @@ msgstr "부가 기능을 삭제합니다."
 msgid "Delete"
 msgstr "삭제"
 
-#, fuzzy
 msgid "Edit information about this add-on."
-msgstr "상세 정보"
+msgstr "이 부가 기능에 대한 정보를 수정합니다."
 
 msgid "Upload a new version of this add-on."
 msgstr "이 부가 기능의 새 버전을 업로드 합니다."
@@ -3343,9 +3245,8 @@ msgstr "이 테마 삭제하기."
 msgid "This add-on is missing some required information before it can be submitted for publication."
 msgstr ""
 
-#, fuzzy
 msgid "This add-on doesn't have any versions."
-msgstr "이 부가 기능은 현재 사용중인 %(app)s 버전과 호환되지 않습니다."
+msgstr "이 부가 기능은 버전이 없습니다."
 
 msgid "Status:"
 msgstr "상태:"
@@ -3362,54 +3263,47 @@ msgid "<strong>{0}</strong> active user"
 msgid_plural "<strong>{0}</strong> active users"
 msgstr[0] "현재 사용자 <strong>{0}</strong>명"
 
-#, fuzzy
 msgid "Submit a New File"
-msgstr "새로운 테마 올리기"
+msgstr "새로운 파일 올리기"
 
-#, fuzzy
 msgid "Submit a New Version"
-msgstr "새 부가 기능 등록"
+msgstr "새 버전 올리기"
 
-#, fuzzy
 msgid "Describe Add-on"
-msgstr "부가 기능 정보를 입력하세요"
+msgstr "부가 기능 설명"
 
-#, fuzzy
+msgid "Name on listing on this site. May be different to the name inside the add-on, which is shown inside Firefox"
+msgstr ""
+
 msgid "Add-on URL:"
-msgstr "부가 기능 URL"
+msgstr "부가 기능 URL:"
 
 msgid "Please use only letters, numbers, underscores, and dashes in your URL."
 msgstr "URL엔 문자, 숫자, 밑줄과 대시문자만 사용하세요."
 
-#, fuzzy
 msgid "Summary:"
-msgstr "요약 정보"
+msgstr "요약:"
 
 msgid "required"
 msgstr "필수 입력"
 
-#, fuzzy
 msgid "This add-on is experimental"
-msgstr "이 부가 기능은 외부 소프트웨어를 필요로 합니다."
+msgstr "이 부가 기능은 테스트용입니다"
 
 msgid "Check this option if your add-on is experimental or otherwise not ready for general use.  The add-on will be listed but will have reduced visibility.  You can change this setting later."
 msgstr ""
 
-#, fuzzy
 msgid "Select a category for this add-on:"
-msgstr "부가 기능이 속할 {1}용 분류를 <b>{0}개 까지</b> 선택하세요:"
+msgstr "이 부가 기능의 카테고리를 선택하세요:"
 
-#, fuzzy
 msgid "Support email:"
-msgstr "기술 지원 이메일"
+msgstr "기술 지원 이메일:"
 
-#, fuzzy
 msgid "Support website:"
-msgstr "기술 지원 사이트"
+msgstr "기술 지원 사이트:"
 
-#, fuzzy
 msgid "License:"
-msgstr "라이선스"
+msgstr "라이선스:"
 
 msgid "Please choose a license appropriate for the rights you grant."
 msgstr ""
@@ -3417,16 +3311,14 @@ msgstr ""
 msgid "If your add-on transmits any data from the user's computer, a privacy policy is required that explains what data is sent and how it is used."
 msgstr ""
 
-#, fuzzy
 msgid "Notes to Reviewer:"
-msgstr "심사원 주의 사항"
+msgstr "심사자 주의 사항:"
 
 msgid "Is there anything our reviewers should bear in mind when reviewing this add-on?"
 msgstr "저희 심사원들이 이 add-on을 평가할 때 고려해야 할 점이 있습니까?"
 
-#, fuzzy
 msgid "These notes will only be visible to you and our reviewers."
-msgstr "이 URL은 개발자에게만 노출됩니다."
+msgstr "이 노트는 귀하와 저희 심사원들에게만 보여집니다."
 
 #, fuzzy
 msgid "Cancel and Disable Version"
@@ -3436,13 +3328,11 @@ msgstr "인쇄용 버전"
 msgid "Submit Version"
 msgstr "새 부가 기능 등록"
 
-#, fuzzy
 msgid "Describe Version"
-msgstr "버전 사용 불가 상태 만들기"
+msgstr "버전 설명"
 
-#, fuzzy
 msgid "Release Notes:"
-msgstr "Release"
+msgstr "릴리즈 노트:"
 
 msgid "Let your users know what's new and what's changed in this version."
 msgstr "사용자들에게 이 버전에서 새로워진 것과 변경된 것을 알려주세요."
@@ -3459,13 +3349,11 @@ msgstr "부가 기능 배포와 등록에 대한 더 많은 정보"
 msgid "Submission Complete"
 msgstr "등록 완료"
 
-#, fuzzy
 msgid "You’re done!"
 msgstr "완료하셨습니다!"
 
-#, fuzzy
 msgid "Version Submitted for Review"
-msgstr "버전 기록서 / 심사원에게 남기는 메모"
+msgstr "심사를 위해 제출된 버전"
 
 #, fuzzy
 msgid "Preview of the version submitted"
@@ -3474,9 +3362,8 @@ msgstr "버전 기록"
 msgid "You’re done! This version will be available after it passes review. You will be notified when it is reviewed."
 msgstr ""
 
-#, fuzzy
 msgid "Version Submitted"
-msgstr "버전 기록"
+msgstr "버전 제출됨"
 
 msgid "You’re done! This version will be available on our site shortly."
 msgstr ""
@@ -3491,16 +3378,14 @@ msgstr "자세한 설명과 스크린샷이 추가된다면 목록에서 더 성
 msgid "Your listing will be more successful by adding a detailed description and screenshots. Get your listing ready for publication:"
 msgstr "자세한 설명과 스크린샷이 추가된다면 목록에서 더 성공적일 것입니다. 게시를 위한 목록을 준비하세요:"
 
-#, fuzzy
 msgid "Manage Listing"
-msgstr "목록 보기"
+msgstr "목록 관리"
 
 msgid "You can also edit this version to add version notes, or source code if your submission includes minified, obfuscated or compiled code."
 msgstr "압축되거나 난독화, 컴파일된 코드를 포함하고 있다면 버전 노트나 소스코드를 추가하도록 버전을 수정할 수 있습니다."
 
-#, fuzzy
 msgid "Edit version {0}"
-msgstr "베타 버전 {0}"
+msgstr "버전 {0} 수정"
 
 #, fuzzy
 msgid "File Signed"
@@ -3524,13 +3409,81 @@ msgstr "다운로드 {0}"
 msgid "You selected only some of the available platforms for this submission. You can upload more files that target other platforms:"
 msgstr ""
 
-#, fuzzy
 msgid "Upload File"
-msgstr "다른 파일 업로드"
+msgstr "파일 업로드"
+
+msgid "Go to My Submissions"
+msgstr "나의 제출로 이동"
 
 #, fuzzy
-msgid "Go to My Submissions"
-msgstr "내 제출 내역"
+msgid "Source Code Upload"
+msgstr "소스 코드가 업로드 됨"
+
+msgid "Do You Need to Submit Source Code?"
+msgstr ""
+
+msgid "You may need to submit source code. If you don’t submit the correct source code now, your add-on may be removed from the site!"
+msgstr ""
+
+#, python-format
+msgid "Please review the <a %(a_attrs)s>source code submission policy</a>."
+msgstr ""
+
+msgid "Do you use any of the following?"
+msgstr ""
+
+msgid "Code minifiers or obfuscators"
+msgstr ""
+
+msgid "Tools that combine multiple files into a single file, such as <span class=\"tech-emphasis\">webpack</span>"
+msgstr ""
+
+msgid "Web template engines, both for HTML and CSS"
+msgstr ""
+
+msgid "Any other tool that takes code or files, applies processing, and generates code or file(s) to include in the add-on"
+msgstr ""
+
+msgid "You do not need to submit Source Code, and you’re ready for the next step."
+msgstr ""
+
+msgid "Your Submission Requires Source Code."
+msgstr ""
+
+#, python-format
+msgid "The source code must meet <a %(a_attrs)s>policy requirements</a>, which includes:"
+msgstr ""
+
+msgid "Step-by-step build instructions to create an exact copy of the add-on code."
+msgstr ""
+
+msgid "A build script that executes all necessary technical steps."
+msgstr ""
+
+msgid "Operating system and build environment requirements."
+msgstr ""
+
+msgid ""
+"Details (including required version and installation instructions), of any programs used in the build process (for example: <span class=\"tech-emphasis\">node</span> and <span class=\"tech-"
+"emphasis\">npm</span> version used)."
+msgstr ""
+
+msgid "<span class=\"instruction-emphasis\">Note:</span> Source files (aside from open-source third party libraries) cannot be transpiled, obfuscated, minified or otherwise machine-generated."
+msgstr ""
+
+#, fuzzy
+msgid "How to Submit:"
+msgstr "입력하기"
+
+msgid "Include instructions in a README file in the source code,"
+msgstr ""
+
+msgid "or in reviewer notes on the next page (if applicable)."
+msgstr ""
+
+#, fuzzy
+msgid "Upload source code:"
+msgstr "소스 코드"
 
 msgid "Add-on Distribution Agreement"
 msgstr "부가 기능 배포 계약"
@@ -3547,9 +3500,8 @@ msgstr "대상 버전"
 msgid "Where to Host Version"
 msgstr "대상 버전"
 
-#, fuzzy
 msgid "Upload Version"
-msgstr "새 버전 업로드하기"
+msgstr "버전 업로드"
 
 #, fuzzy
 msgid "Use the fields below to upload your add-on package. After upload, a series of automated validation tests will be run on your file."
@@ -3565,27 +3517,22 @@ msgstr "관리자 우선 작업내역"
 msgid "Create a Theme Version"
 msgstr "새로운 테마 만들기"
 
-#, fuzzy
 msgid "Create a Theme"
-msgstr "새로운 테마 만들기"
+msgstr "테마 만들기"
 
-#, fuzzy
 msgid "Submit File"
-msgstr "새로운 테마 올리기"
+msgstr "파일 제출"
 
 #, fuzzy
 msgid "Sign Add-on"
 msgstr "부가 기능 등록"
 
-#, fuzzy
 msgid "Theme generate"
-msgstr "테마가 삭제됐습니다."
+msgstr "테마 생성"
 
-#, fuzzy
 msgid "Theme generator"
-msgstr "테마 라이선스"
+msgstr "테마 생성기"
 
-#, fuzzy
 msgid "Theme name"
 msgstr "테마 이름"
 
@@ -3647,24 +3594,20 @@ msgstr ""
 msgid "The color of text in fields in the toolbar, such as the URL bar. Manifest field:  toolbar_field_text."
 msgstr ""
 
-#, fuzzy
 msgid "optional"
-msgstr "(선택사항)"
+msgstr "선택 사항"
 
-#, fuzzy
 msgid "Browser preview"
-msgstr "커서를 올려서 미리보기 확인"
+msgstr "미리보기 보기"
 
 msgid "Back"
 msgstr ""
 
-#, fuzzy
 msgid "Uploading Theme"
-msgstr "인기 급상승 테마"
+msgstr "테마 업로드"
 
-#, fuzzy
 msgid "Finish Theme"
-msgstr "%s 테마"
+msgstr "테마 완료"
 
 msgid "API Credentials"
 msgstr ""
@@ -3688,9 +3631,8 @@ msgid ""
 "href=\"%(docs_url)s\">API documentation</a>."
 msgstr ""
 
-#, fuzzy
 msgid "You don't have any API credentials."
-msgstr "계정이 없습니다."
+msgstr "API 자격 증명이 없습니다."
 
 msgid "Revoke"
 msgstr "취소"
@@ -3707,9 +3649,8 @@ msgstr "보이지 않음"
 msgid "Please complete your add-on by adding a version or missing metadata."
 msgstr "버전이나 누락된 메타데이터를 추가하여 부가 기능을 완성해주세요."
 
-#, fuzzy
 msgid "You will receive an email when the review is complete. Until then, your add-on is not listed in our gallery but can be accessed directly from its details page. "
-msgstr "심사 완료시 이메일을 받아보게 됩니다. 그 전까지 부가 기능은 갤러리에 노출되지 않지만 해당 부가 기능의 상세 정보 페이지로 바로 접근은 가능합니다."
+msgstr "심사 완료시 이메일을 받아보게 됩니다. 그 전까지 부가 기능은 갤러리에 노출되지 않지만 해당 부가 기능의 상세 정보 페이지로 바로 접근은 가능합니다. "
 
 msgid "Your add-on is displayed in our gallery and users are receiving automatic updates."
 msgstr "부가 기능이 갤러리에 노출되고 있고 사용자들은 자동으로 업데이트를 받아보게 됩니다."
@@ -3725,9 +3666,8 @@ msgid "Created:"
 msgstr "제작일:"
 
 #. {0} is a date. dennis-ignore: E201,E202,W202
-#, fuzzy
 msgid "Add-on Multi Process Status:"
-msgstr "부가 기능 심사 과정"
+msgstr "부가 기능 멀티 프로세스 상태:"
 
 msgid "Your add-on compatibility with Multi Process Firefox (e10s)."
 msgstr ""
@@ -3765,9 +3705,8 @@ msgstr ""
 msgid "Latest Version:"
 msgstr "최신 버전:"
 
-#, fuzzy
 msgid "This is the newest uploaded unlisted version."
-msgstr "이 버전이 최신이지만 아직 사이트 상에 올라가지는 않았습니다."
+msgstr "이 버전은 아직 사이트 상에 올라가지 않은 최신 버전입니다."
 
 msgid "Upload New Version"
 msgstr "새 버전 업로드하기"
@@ -3866,9 +3805,8 @@ msgstr "그밖의 자원"
 msgid "Porting"
 msgstr "별점"
 
-#, fuzzy
 msgid "Community"
-msgstr "코멘트"
+msgstr "커뮤니티"
 
 msgid "About"
 msgstr "소개"
@@ -3880,20 +3818,17 @@ msgstr "포럼"
 msgid "Blog"
 msgstr "블로그"
 
-#, fuzzy
 msgid "Contact Us"
 msgstr "연락처"
 
 msgid "Support"
 msgstr "도움말"
 
-#, fuzzy
 msgid "Policies"
-msgstr "부가 기능 정책"
+msgstr "정책"
 
-#, fuzzy
 msgid "Report Bug"
-msgstr "정책 위반 신고"
+msgstr "오류 보고"
 
 msgid "Site Status"
 msgstr "사이트 상태"
@@ -3901,12 +3836,11 @@ msgstr "사이트 상태"
 msgid "Web-Ext: build & test extensions"
 msgstr ""
 
-#, fuzzy
 msgid "Compatibility Checker"
-msgstr "부가 기능 호환성 검사기"
+msgstr "호환성 검사기"
 
 msgid "Promote"
-msgstr ""
+msgstr "승격"
 
 #, fuzzy
 msgid "Get Your Add-on Featured"
@@ -3918,14 +3852,12 @@ msgstr ""
 msgid "Legal"
 msgstr "법률"
 
-#, fuzzy
 msgid "Report Trademark Abuse"
-msgstr "정책 위반 신고"
+msgstr "상표권 침해 신고"
 
 msgid "Legal Notices"
 msgstr "법적 고지"
 
-#, fuzzy
 msgid "Review Add-ons"
 msgstr "부가 기능 심사"
 
@@ -3936,12 +3868,11 @@ msgid "Join us!"
 msgstr "가입하기!"
 
 msgid "Write Some Code"
-msgstr ""
+msgstr "코드 작성"
 
 msgid "Help make add-ons better by contributing your coding skills."
 msgstr ""
 
-#, fuzzy
 msgid "Get started"
 msgstr "시작하기"
 
@@ -3955,33 +3886,39 @@ msgstr ""
 msgid "See how"
 msgstr ""
 
-#, fuzzy
 msgid "Manage Your Add-on"
 msgstr "부가 기능 관리하기"
 
 msgid "Sign In to Edit and Update Your Add-on"
 msgstr ""
 
-msgid "Help us improve the developer experience"
+msgid "Resources for a successful launch"
 msgstr ""
 
+#, python-format
 msgid ""
-"We’re interested in your feedback about the extension development experience! Take our short survey to let us know what kinds of documentation, APIs, and tools would be most useful to your "
-"development work."
-msgstr ""
-
-msgid "Take Survey"
+"You've built your extension and are ready to publish it. What comes next? Check out our tips for creating an appealing listing page, getting your extension featured on "
+"%(amo_link_open)saddons.mozilla.org%(amo_link_close)s, finding answers to development questions, and staying up-to-date with news and events relevant to extension developers."
 msgstr ""
 
 #, fuzzy
+msgid "View Resources for Publishers"
+msgstr "사용자 통계 보기"
+
 msgid "Welcome Back"
-msgstr "{0}님, 어서오세요"
+msgstr "환영합니다"
 
 msgid "Help users discover your extension by creating an appealing listing."
 msgstr ""
 
-#, fuzzy
 msgid "Learn How"
+msgstr "방법 알아보기"
+
+#, python-format
+msgid "Want your extension to be featured on %(amo_link_open)saddons.mozilla.org%(amo_link_close)s? Our featured extensions policies will tell you what you need to know."
+msgstr ""
+
+msgid "Learn More"
 msgstr "더 알아보기"
 
 #. {0} is a date. dennis-ignore: E201,E202,W202
@@ -4252,9 +4189,8 @@ msgstr "승인 상태"
 msgid "Notes for Reviewers"
 msgstr "심사원 주의 사항"
 
-#, fuzzy
 msgid "Optionally, enter any information that may be useful to the Reviewer of this add-on, such as test account information."
-msgstr "추가로, 이 부가 기능을 심사할 편집자에게 도움이 될만한 정보(테스트용 계정 정보 같은)를 입력해 주세요."
+msgstr "선택적으로, 이 부가 기능을 심사할 심사자에게 도움이 될 테스트용 계정 정보 같은 정보를 입력해 주세요."
 
 msgid "Source code"
 msgstr "소스 코드"
@@ -4339,9 +4275,6 @@ msgstr "다른 버전 보기"
 msgid "Currently on AMO"
 msgstr "AMO상의 버전"
 
-msgid "Status"
-msgstr "상태"
-
 # Header for a column in a table
 msgid "Validation"
 msgstr "검사"
@@ -4420,52 +4353,1326 @@ msgid "{0} warning"
 msgid_plural "{0} warnings"
 msgstr[0] "경고 {0}개"
 
+#. editorial content for the discovery pane.
 msgid "Stop sneaky trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
-msgid " Block invisible trackers and spying ads that follow you around the web."
+#. editorial content for the discovery pane.
+msgid "Block invisible trackers and spying ads that follow you around the web."
 msgstr ""
 
-msgid "Customize new tab pages {start_sub_heading}with {addon_name} {end_sub_heading}"
+#. editorial content for the discovery pane.
+msgid "Customize new tab pages {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
+#. editorial content for the discovery pane.
 msgid "Enjoy a beautiful new page with customizable backgrounds, local weather info, and more."
 msgstr ""
 
+#. editorial content for the discovery pane.
 msgid "Translate easily {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
+#. editorial content for the discovery pane.
 msgid "Highlight any text, right-click, and translate instantly."
 msgstr ""
 
+#. editorial content for the discovery pane.
 msgid "Search Images {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
+#. editorial content for the discovery pane.
 msgid "Perform reverse image searches from an array of engines."
 msgstr ""
 
-msgid "Download videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+#. editorial content for the discovery pane.
+msgid "Ad blocking & privacy protection {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
-msgid "Works seamlessly with most popular video sites."
+#. editorial content for the discovery pane.
+msgid "A simple set-up lets you take control of the ads you see and how you’re tracked on the internet."
 msgstr ""
 
+#. editorial content for the discovery pane.
+msgid "Re-imagine tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Do you have a ton of open tabs? Organize them in a tidy sidebar."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop Facebook tracking {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Isolate your Facebook identity into a separate “container” that makes it harder for Facebook to track your movements around the web."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Simplify search {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Just highlight text on any web page to search the phrase from an array of engines."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Instant weather updates {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get instant global weather information right in Firefox."
+msgstr ""
+
+#. editorial content for the discovery pane.
 msgid "Tab Customization {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
-msgid "Set the page you see every time you open a new tab."
+#. editorial content for the discovery pane.
+msgid "Choose the page you see every time you open a new tab."
 msgstr ""
 
+#. editorial content for the discovery pane.
+msgid "Reverse image search {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "See an interesting picture on the web and want to learn more about it? Try this image search tool."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Download videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Works with YouTube, Facebook, Vimeo, Twitch, Dailymotion, Periscope, and hundreds of other video sites."
+msgstr ""
+
+#. editorial content for the discovery pane.
 msgid "Enhance your emoji game {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
-msgid "Dozens of amazing emojis for every occasion—always just one click away."
+#. editorial content for the discovery pane.
+msgid "Dozens of amazing emojis for every occasion—always just a click away."
 msgstr ""
 
-msgid "Take screenshots {start_sub_heading}with {addon_name}{end_sub_heading}"
+#. editorial content for the discovery pane.
+msgid "Manage passwords {start_sub_heading}with {addon_name}{end_sub_heading}"
 msgstr ""
 
-msgid "More than just a basic screenshot tool, Awesome Screenshot Plus lets you annotate images with custom text and graphics, plus the ability to store and share your visuals."
+#. editorial content for the discovery pane.
+msgid "Simplify and sync all your various website logins across devices with one password to rule them all."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block ads {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "A lightweight and effective ad blocker. uBlock Origin enforces thousands of content filters without chewing up a bunch of memory."
+msgstr "가볍고 효과적인 광고 차단기입니다. uBlock Origin은 메모리를 많이 소비 하지 않으면서 수천개의 필터를 적용합니다."
+
+#. editorial content for the discovery pane.
+msgid "Improve videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy a suite of new YouTube features, like cinema mode, ad blocking, auto-play control, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily find images {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Highlight any text and right-click to quickly perform an image search."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy visual bookmarks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+#, fuzzy
+msgid "Access your favorite sites from a tile layout."
+msgstr "웹 브라우저에 사고싶은 것들을 저장해 놓을 수 있습니다."
+
+#. editorial content for the discovery pane.
+msgid "Access knowledge {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatically add Britannica facts to your search results."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Remove YouTube Ads {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block annoying ads and annotations from appearing on YouTube."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Read anywhere {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Send news articles, stories, blog posts, and more to your Kindle."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Color code your tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Organize your tabs by color grouping them based on URL patterns."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Prevent cryptocurrency mining {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop malicious websites from using your computer power to mine for cryptocurrency."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatic grammar checks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get grammar help anywhere you write on the web—social media, email, docs, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Check global times {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Display current worldwide times in Firefox's status bar."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easy translations {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Highlight text on any webpage—or select the entire page— to translate instantly."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Tap academic wisdom {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy free access to 10+ million research papers."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Customize mouse gestures {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Discover a new way to navigate with 50+ helpful mouse gestures."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Optimize videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Darken the page around video players for a focused viewing experience."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Search in good conscience {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+#, python-format
+msgid "Ecosia uses 80% of its search profits to fund tree-planting programs around the world. Put Ecosia right into Firefox search"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find missing web content  {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Is the page you're looking for unavailable? Search for an archived/cached version."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find missing web content {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enlarge images {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Simply hover over an image to magnify it."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make cookies disappear {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatically erase cookies after you close a tab."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Adjust page size view {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "A simple way to adjust the size of any page's text—or even enlarge the page itself."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block invisible trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop trackers in their tracks and learn more about them."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Leave a clean digital trail {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make Firefox forget website data like cookies and local storage, but only for domains you choose."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Save text for later {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop writing the same thing over and over again! If you frequently re-use the same phrases in your work or other communications, save them in Clippings and easily paste them when needed."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block email ads {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get more screen space by removing ads from your web-based inbox."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find your tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage your open tabs in a tidy sidebar."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Avoid sneaky trackers and restrictions {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Disguise your navigation by cloaking the identity of your browser and operating system."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Refresh tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatically reload tabs based on time intervals you set."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Separate your online lives {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Privately distinguish your various online identities—work, personal, etc.—through color-coded tabs that split your digital cookie trail."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Gain an additional layer of tracking protection as you browse the web."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Read ePub files {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy ePub files right in Firefox—increase font size, page dimensions, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Elevate your YouTube experience {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Play videos by default in the highest quality, turn off annotations, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Track the trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get a glimpse into who's tracking you with just a click."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Change your proxy server {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Surf the web through self-defined proxy settings."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Control video playback {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enhance your viewing experience by adjusting video speed and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Browse securely {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Add encrypted security to any site that supports HTTPS."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Shop & save {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get the best coupons automatically applied to your shopping cart at checkout."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Swift translations {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Translate highlighted text or the entire webpage"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Improve Reddit {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Change the way you surf Reddit by using tags and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Capture the web {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Screenshot webpages, make edits, and share."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "A superior Windows-only downloader tool."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Know your trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find out who's tracking you and where they may be sharing your information."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Surf anonymously {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Browse the web with disguised identity—even appear as if you're browsing from another country."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access your favorite sites, recently closed tabs, and more—all from a gorgeous tile layout."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Set your homepage {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Designate a custom home page for your new tabs."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "List your tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Convert all your open tabs into a list to easily manage them and speed up Firefox."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Robust download management {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Check the state of your downloads through a status bar, download history page, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Capture web content {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Save information from the internet to OneNote so you can edit, annotate, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Search tracking protection {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop trackers when you click Google and Yandex search returns."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Dynamic navigation {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Use mouse gestures to close tabs, go back one page, reload, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Add images to search returns {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy thumbnail images alongside your search returns."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Ease eye strain {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make the web easier on the eyes by darkening its display."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop pop-ups {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block all pop-ups by default, then decide which ones you'd like to open."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Customize your favorite websites {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Change the look of any website! Shift colors, page backgrounds, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Customize your new tab {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Edit the new tab page to display your preferred number of tiles, background image, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get quick translations {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Highlight text on any website, right-click, and translate instantly."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage your passwords {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Store passwords securely and access them across multiple devices."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Know where you go on the web {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get the country location for websites you visit. Be an informed internet traveler."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enhance your reading experience {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make the text you're reading more appealing by removing the clutter around it."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Open multiple links {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Right-click and drag over links you want open in new tabs."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Retrieve tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access recently closed tabs by right-clicking the icon in your toolbar."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Inspire productivity {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Modify your new tab page to display a beautiful background, set your daily focus, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "View images {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Brings back the \"View image\" button while searching on Google Images."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Increase productivity {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block time-wasting sites so you can focus on the task at hand."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Refresh Tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatically reload tabs based on time intervals."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Fix your favorites {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find and resolve broken bookmarks, duplicates, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stress less {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get things done with a helpful to-do list that syncs across devices."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Shop Smarter {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Track historical pricing, find competing products, know the seller's ratings, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make it your YouTube {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Play videos in a pop-out window, only see ads within subscribed channels, take video screenshots, and so much more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Explore website traffic {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get in-depth engagement and traffic information for any website."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Style Wikipedia {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Applies a fresh and modern appearance to Wikipedia."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Work faster {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Use mouse gestures to get to things done—quicker."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Disguise the page {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Hide portions of the website you're viewing."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Download pictures {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Grab images from any website and download them."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Mask your location {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Disguise your location to throw off trackers and protect your privacy."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Self-censor {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Restrict access to inappropriate or undesired content with a filter."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Improve new tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Open a new tab to the right of your current tab, not at the end of the row."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Conquer spam {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Use clever temporary email addresses to remain anonymous and avoid spam."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Alter your privacy {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily customize the built-in privacy settings in Firefox."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enhance your experience on VK {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Remove ads and download audio from VK."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get instant translations {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access immediate translation by highlighting text and clicking the button that pops up."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Customize new tabs {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get creative and customize your new tab page by displaying your favorite sites and selecting a theme."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "No more redirects {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Go straight to the website you want to access without being redirected in between."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "WhatsApp on the web {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access WhatsApp from within Firefox's toolbar panel to get badge notification of unread threads."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Translate to/from German {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Get expert German translations between English, French, Spanish, and other languages."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Create a website block list {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Restrict Firefox from accessing websites you define."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Work smarter {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage your productivity by working in set time intervals."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easy reading {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Check your favorite RSS feeds all in a single page."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Reduce eye strain {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enable night mode for a better viewing experience."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Search images {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Reverse image search by leveraging the power of multiple search providers."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Save it for later {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Store web pages to access across devices."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily select bookmark locations {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "A better way to save bookmarks if you use multiple bookmark folders."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Zero formatting {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Strip away unnecessary formatting and copy just the plain text."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Convert an entire webpage to your preferred language—with the click of a button."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Extract links {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Instantly display all links from a webpage in new tabs."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "View documents {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access PDFs using your preferred PDF application."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Skip redirects & trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Strip away redirect pages and URL tracking parameters."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop search trackers {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Prevent search engines from knowing what search results you click on."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Download YouTube videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Download video and/or audio."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Gather reading material {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "An advanced reader for aggregating all of your RSS/Atom/RDF sources."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Jot it down {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Create general and website-specific notes to review later."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Phone-like scrolling {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Features \"grab-n-drag\" mouse scrolling for desktop webpages."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Delete data {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Clear your browser cache with a click or keystroke."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Never forget again {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Create and manage a to-do list in your browser."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Highlight text {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy a highly customizable text highlighter with different colors and save options."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy music from around the world {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Access 20,000+ radio stations from all over the globe."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Listen to videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Save bandwidth by just streaming the audio from YouTube clips."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Transform text into images {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Turn words into beautiful headlines and image overlay text."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Surf safely {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Navigate to the secure version of a website if it's available."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Delete your navigation history {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Specify a custom number of days to retain browser history before it's automatically cleared."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Remove search ads {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop ads from appearing within your search results."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage passwords safely {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Store passwords securely and sign in to known websites automatically."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Block ads & tracking {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Protect your privacy by blocking ads and trackers (plus, you'll speed up page loads)."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Fill forms automatically {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Save entered data once and it will autofill next time."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Browse privately {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Jump into private browsing mode with a click."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop tab hijacking {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Don't let clicked links take control of your current tab and load content you didn't ask for."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily access Wikipedia {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Perform a Wikipedia search by simply highlighting text from any webpage and right-clicking."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Discover site-specific content {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find what you're looking for within a specific domain."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find videos {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Highlight text from any website and right-click to search YouTube for related media."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Gain an Amazon edge {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "When looking at product pages on other online shops, if it's also available on Amazon you can simply click a button to check its Amazon listing."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Tweet it out {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily broadcast web content to your Twitter following."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Ultimate tab control {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "So many tab control options—close duplicate tabs, merge windows, copy the tab title, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Enjoy a strange education {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Load a random Wikipedia article each time you open a new tab."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Change up your new tab {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Configure new tab pages to display custom background colors and images."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Cat lovers rejoice {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Meet an adorable kitty with every new tab. Give it a scratch behind the ear and see what happens."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Decrease productivity {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "For those moments when you need to fire lasers out of a cat."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Search Firefox {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Easily access your open tabs, bookmarks, and history."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Lots of open tabs? Skip the scrolling and search via keyboard shortcuts."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Explore what's beneath {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Uncover the software that supports whatever website you're visiting."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Prevent redirects & tracking {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Stop redirects so you can access the site you want—faster."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Reveal typed passwords {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Adds show/hide ability to all password fields."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Reduce distractions {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Focus on what you're watching by dimming everything but the video player."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage bookmarks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Modify your bookmarks through an easily accessible panel."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Keep passwords safe {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Store passwords securely and sign in automatically to known websites."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "A simple ad blocker focused on displaying just the content you want."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Track Amazon Pricing History {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make informed decisions by tracking the price of a product listed on Amazon."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Shop with confidence {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "An extra check to ensure you're shopping on a site that's been vetted for reliability."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Track productivity {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Measure the amount of time you spend on the computer, or on specific work apps like Trello, JIRA, Basecamp, GitHub, and many more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Clip web content like articles, videos, images, and more to save and use for individual projects or real-time team collaboration."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Surf securely {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Only allow web content to run from sites you trust."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Manage cookies {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Take full control of the cookies you've accumulated while browsing."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Forget history {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Automatically delete browser history for websites you select."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Safeguard Bookmarks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Password-protect your personal bookmarks."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Prevent IP address leaks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Do you use a VPN? Your IP address may leak. Put a stop to that by disabling WebRTC."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Close annoying overlays {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Simply click a button to close annoying pop-up overlays."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Investigate any image {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Find an interesting image on the web? Use TinEye to explore its origins."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Streamline things {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Just drag text, images, or links to perform actions like copy, open, search, and more."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Harness the ability to download video and/or audio in multiple formats."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Location awareness {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Learn where any website's server is geographically located. Be an informed web traveler."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Fix annoying audio {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Is the volume on a website too quiet? Too loud? SoundFixer can help."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Edit before printing {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make extraordinary visual changes—remove ads or unsavory content—to any webpage you want to print."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Track Amazon pricing history {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Make knowledgeable decisions by tracking and receiving alerts for the price of a product listed on Amazon."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Master audio {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Adjust browser audio settings with extreme clarity."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Privacy protection {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Defend yourself against the sneakiest trackers."
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Cover your tracks {start_sub_heading}with {addon_name}{end_sub_heading}"
+msgstr ""
+
+#. editorial content for the discovery pane.
+msgid "Search with more security with tracker blocking, smarter encryption, private search, and other essentials."
 msgstr ""
 
 #, python-format
@@ -4587,13 +5794,11 @@ msgstr "부가 기능으로 돌아가기"
 msgid "Version: %(version)s &bull; Size: %(size)s &bull; SHA256 hash: %(sha256)s &bull; Mimetype: %(mimetype)s"
 msgstr "버전: %(version)s &bull; 크기: %(size)s &bull; MD5 해쉬값: %(md5)s &bull; Mimetype: %(mimetype)s"
 
-#, fuzzy
 msgid "File Compare :: Reviewer tools"
-msgstr "파일 비교 :: 편집자 도구"
+msgstr "파일 비교 :: 심사자 도구"
 
-#, fuzzy
 msgid "File Viewer :: Reviewer tools"
-msgstr "파일 뷰어 :: 편집자 도구"
+msgstr "파일 뷰어 :: 심사자 도구"
 
 msgid "Validation failed:"
 msgstr "검사 실패:"
@@ -4761,9 +5966,6 @@ msgstr "부가 기능이란?"
 msgid "Add-ons are applications that let you personalize %(app)s with extra functionality or style. Try a time-saving sidebar, a weather notifier, or a themed look to make %(app)s your own."
 msgstr "부가 기능이란 %(app)s에 추가적인 기능이나 외형을 추가해서 개인화를 도와주는 애플리케이션을 말합니다. 시간을 절약시켜주는 사이드바, 날씨 알리미를 깔아 보시거나 테마를 통해 자신만의 %(app)s 룩을 만들어 보세요."
 
-msgid "Learn More"
-msgstr "더 알아보기"
-
 msgid "Learn More About Add-ons"
 msgstr "부가 기능에 대해 더 알아보기"
 
@@ -4837,11 +6039,10 @@ msgstr ""
 msgid "Who creates these add-ons?"
 msgstr "누가 이런 부가 기능들을 만들고 있나요?"
 
-#, fuzzy
 msgid ""
 "The add-ons listed here have been created by thousands of developers from our community, ranging from individual hobbyists to large corporations. All publicly listed add-ons are reviewed by a team "
 "of reviewers before being released. Add-ons marked as Experimental have not been reviewed and should only be installed with caution."
-msgstr "이곳에 등재된 부가 기능들은 저희 커뮤니티에 있는 수천명의 개발자가 제작한 것들로써, 개인적인 취미 활동부터 거대 기업들까지 그 영역은 광범위합니다. 모든 공개 부가 기능은 출시에 앞서 편집자 팀에 의해 심사를 받습니다. 시험용으로 표시된 부가 기능은 심사를 받지 않았으므로 설치시 주의해야 합니다."
+msgstr "이곳에 등록된 부가 기능은 커뮤니티의 수천명의 개발자가 제작한 것으로써, 개인의 취미 활동부터 큰 기업까지 범위가 넓습니다. 모든 공개 부가 기능은 출시에 앞서 심사자 팀에 의해 심사를 받습니다. 실험적으로 표시된 부가 기능은 심사를 받지 않았으므로 설치시 주의해야 합니다."
 
 msgid "How do I keep up with what's happening at AMO?"
 msgstr "AMO에 대한 소식을 계속 받아볼 수 있을까요?"
@@ -4871,11 +6072,11 @@ msgstr "참여할 수 있는 매우 다양한 방법들이 있습니다. 기술�
 msgid "<a href=\"%(url)s\">Make your own add-on</a>. We provide free hosting and update services and can help you reach a large audience of users."
 msgstr "<a href=\"%(url)s\">나만의 부가 기능을 만들어 보세요</a>. 무료 호스팅과 업데이트 서비스를 제공하고 있으며 사용자에게 쉽게 다가갈 수 있도록 도와드리겠습니다."
 
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you have add-on development experience, <a href=\"%(url)s\"> become an Add-on Reviewer</a>! Our reviewers are add-on fans with a technical background who review add-ons for code quality and "
 "stability."
-msgstr "부가 기능 개발 경험이 있다면 <a href=\"%(url)s\">편집자가 되어보세요</a>! 저희 편집자들은 기술적 배경 지식은 가진 부가 기능 팬 집단으로 부가 기능의 코드 품질과 안정성을 심사합니다."
+msgstr "부가 기능 개발 경험이 있다면 <a href=\"%(url)s\">심사자가 되어보세요</a>! 심사자들은 기술적 배경 지식을 가진 부가 기능 팬 집단으로 부가 기능의 코드 품질과 안정성을 심사합니다."
 
 #, python-format
 msgid "Help improve this website. It's open source, and you can file bugs and submit patches. <a href=\"%(url)s\"> GitHub</a> contains all of our current bugs, legacy bugs can still be found in Bugzilla."
@@ -5158,9 +6359,8 @@ msgstr "이 버전엔 이이상 많은 파일을 업로드 할 수 없습니다.
 msgid "This rating can't be flagged because it has no review text."
 msgstr ""
 
-#, fuzzy
 msgid "Thanks; this review has been flagged for reviewer approval."
-msgstr "감사합니다. 평가가 편집자에게 전달되었습니다."
+msgstr "감사합니다. 심사가 심사자에게 전달되었습니다."
 
 msgid "Add a review for {0}"
 msgstr "{0}에 대한 평가 작성"
@@ -5300,9 +6500,8 @@ msgid "end"
 msgstr "종료"
 
 #. L10n: Description of what can be searched for
-#, fuzzy
 msgid "add-on, reviewer or comment"
-msgstr "부가 기능, 편집자 내지는 코멘트"
+msgstr "부가 기능, 심사자나 의견"
 
 msgid "Search by add-on name / author email"
 msgstr "검색 (부가 기능 이름 / 제작자 이메일)"
@@ -5355,9 +6554,8 @@ msgid "Someone else is reviewing this theme."
 msgstr "다른 사람이 이 테마를 심사중입니다."
 
 #. L10n: Description of what can be searched for.
-#, fuzzy
 msgid "theme, reviewer, or comment"
-msgstr "앱, 심사원, 코멘트"
+msgstr "테마, 심사자, 의견"
 
 #, fuzzy
 msgid "Private Whiteboard"
@@ -5387,19 +6585,14 @@ msgstr "추가 정보 필요"
 msgid "Expired Information Request"
 msgstr "추가 정보 필요"
 
-#, fuzzy
-msgid "Contains Reviewer Comment"
-msgstr "편집자 코멘트 있음"
-
 msgid "Sources provided"
 msgstr "원본 제공됨"
 
 msgid "WebExtension"
 msgstr "WebExtension"
 
-#, fuzzy
 msgid "Is locked by a reviewer."
-msgstr "부가 기능이 편집자의 심사를 거쳤습니다"
+msgstr "심사자에 의해 잠겼습니다."
 
 msgid "Has auto-approval disabled flag set."
 msgstr ""
@@ -5488,9 +6681,8 @@ msgstr "인쇄용 버전"
 msgid "This will reject the selected public versions. The comments will be sent to the developer."
 msgstr "부가 기능 심사를 거부하며 심사 대기열에서 삭제합니다."
 
-#, fuzzy
 msgid "Reviewer reply"
-msgstr "검토자 코멘트"
+msgstr "심사자 답변"
 
 #, fuzzy
 msgid "This will send a message to the developer. You will be notified when they reply."
@@ -5499,9 +6691,8 @@ msgstr "제작자에게 추가 정보를 요청하려면 다음의 양식을 기
 msgid "Request super-review"
 msgstr "상급 심사 요구"
 
-#, fuzzy
 msgid "If you have concerns about this add-on that an admin reviewer should look into, enter your comments in the area below. They will not be sent to the developer."
-msgstr "이 부가 기능이 보안, 저작권 등 관리자가 검토해야 한다고 생각되시면 아래에 코멘트를 입력해 주세요. 이 코멘트는 제작자가 아닌, 관리자에게만 전송될 것입니다."
+msgstr "이 부가 기능을 심사자가 봐야 한다고 생각되시면 아래에 의견을 입력해 주세요. 이 의견은 개발자에게는 보내지지 않습니다."
 
 #, fuzzy
 msgid "Make a comment on this version. The developer won't be able to see this."
@@ -5582,9 +6773,8 @@ msgstr "최근 업데이트: {0}"
 msgid "Flagged Themes ({0})"
 msgstr "표시된 테마"
 
-#, fuzzy
 msgid "Lightweight Themes Review Log"
-msgstr "가벼운 테마"
+msgstr "가벼운 테마 심사 로그"
 
 #, fuzzy
 msgid "Deleted Themes Log"
@@ -5634,6 +6824,14 @@ msgstr "심사 작업을 진행 합니다."
 
 msgid "Review lock limit reached"
 msgstr ""
+
+#, fuzzy
+msgid "{addon} :: EULA"
+msgstr "{addon} :: 정책 위반 신고"
+
+#, fuzzy
+msgid "{addon} :: Privacy Policy"
+msgstr "이 부가 기능은 개인 정보 보호 정책을 보유하고 있습니다"
 
 msgid "{0} theme review successfully processed (+{1} points, {2} total)."
 msgid_plural "{0} theme reviews successfully processed (+{1} points, {2} total)."
@@ -5703,13 +6901,11 @@ msgstr "상세 정보"
 msgid "Image Gallery"
 msgstr "이미지 갤러리"
 
-#, fuzzy
 msgid "Nothing to see here!  The developer did not include any details."
-msgstr "내용이 아무것도 없습니다! 이 개발자는 세부 정보를 전혀 올려놓지 않았습니다."
+msgstr "내용이 없습니다!  이 개발자는 세부 정보를 올려놓지 않았습니다."
 
-#, fuzzy
 msgid "Return to the Reviewer Tools dashboard"
-msgstr "편집자 도구 대문으로 돌아가기"
+msgstr "심사자 도구 대시보드로 돌아가기"
 
 msgid "Reviewer Leaderboard"
 msgstr "심사원 현황판"
@@ -5766,9 +6962,8 @@ msgstr "삭제 취소"
 msgid "Save"
 msgstr "저장"
 
-#, fuzzy
 msgid "Add-on Reviewer Performance"
-msgstr "부가 기능 심사 과정"
+msgstr "부가 기능 심사자 성능"
 
 msgid "View statistics for user"
 msgstr "사용자 통계 보기"
@@ -5847,9 +7042,8 @@ msgstr "도움이 될만한 링크:"
 msgid "Add-on Policy"
 msgstr "부가 기능 정책"
 
-#, fuzzy
 msgid "Reviewer's Guide"
-msgstr "심사원 지침사항"
+msgstr "심사자 가이드"
 
 #. "Content Review [add-on name]"
 #, fuzzy
@@ -6338,12 +7532,6 @@ msgstr "플랫폼별"
 msgid "by Add-on Status"
 msgstr "부가 기능 상태별"
 
-msgid "Subscribers"
-msgstr "구독자"
-
-msgid "Ratings"
-msgstr "별점"
-
 msgid "Add-on Statistics"
 msgstr "부가 기능 통계"
 
@@ -6601,6 +7789,13 @@ msgstr "새로운 사이트 방문"
 msgid "To create your own collections, you must have a Mozilla Add-ons account."
 msgstr "모음집을 제작하시려면 Mozilla 부가 기능 계정이 있어야 합니다."
 
+msgid "Create an Add-ons Account"
+msgstr "부가 기능 계정 만들기"
+
+#, python-format
+msgid "or <a href=\"%(login)s\">log in to your current account</a>"
+msgstr "아니면 <a href=\"%(login)s\">현재 사용중인 계정으로 로그인</a> 하세요"
+
 msgid "Footer logo"
 msgstr "푸터 로고"
 
@@ -6614,9 +7809,8 @@ msgstr ""
 msgid "View the new site"
 msgstr "모바일 사이트 보기"
 
-#, fuzzy
 msgid "Report a bug"
-msgstr "정책 위반 신고"
+msgstr "오류 보고"
 
 #, fuzzy
 msgid ""
@@ -6629,13 +7823,11 @@ msgstr ""
 msgid "get to know <b>add-ons</b>"
 msgstr "<b>부가 기능</b> 안내"
 
-#, fuzzy
 msgid "Download Firefox"
-msgstr "다운로드"
+msgstr "Firefox 다운로드"
 
-#, fuzzy
 msgid "Android Browser"
-msgstr "안드로이드용 부가 기능"
+msgstr "Android 브라우저"
 
 msgid "iOS Browser"
 msgstr "iOS 브라우저"
@@ -6734,15 +7926,32 @@ msgstr "정말 <b>{0}</b>개의 전체 번역판을 삭제하시겠습니까? �
 msgid "Delete Locale"
 msgstr "번역 삭제"
 
+#, python-format
+msgid "The user \"%(user)s\" has been banned."
+msgstr ""
+
+#, python-format
+msgid "The picture belonging to user \"%(user)s\" has been deleted."
+msgstr ""
+
+#, python-format
+msgid "The users \"%(users)s\" have been banned."
+msgstr ""
+
+msgid "Ban selected users"
+msgstr ""
+
 msgid "Profile Photo"
 msgstr "프로필 사진"
 
 msgid "Addons"
 msgstr ""
 
-#, fuzzy
+msgid "Ratings"
+msgstr "별점"
+
 msgid "Activity Logs"
-msgstr "활동 내역"
+msgstr "활동 로그"
 
 msgid "Email must be {email}."
 msgstr "이메일은 반드시 {email}이여야 합니다."
@@ -6764,10 +7973,6 @@ msgstr "잘못된 형식의 URL입니다. http://example.com/my_page 와 같은 
 
 msgid "To anonymize, enter a reason for the change but do not change any other field."
 msgstr "익명으로 표시하려면 변경 사유를 입력하시고 그 외 다른 항목은 변경하지 마세요."
-
-#, fuzzy
-msgid "Please enter at least one name to be denied."
-msgstr "${0} 미만의 값으로 입력해 주세요."
 
 msgid "No user with that email."
 msgstr "해당 이메일로 등록된 사용자가 없습니다"
@@ -6804,9 +8009,8 @@ msgstr "부가 기능 호환성을 업그레이드 할 수 없습니다"
 msgid "my sdk-based add-on cannot be upgraded"
 msgstr "sdk 기반 부가 기능을 업그레이드 할 수 없습니다"
 
-#, fuzzy
 msgid "my add-on is reviewed by a reviewer"
-msgstr "부가 기능이 편집자의 심사를 거쳤습니다"
+msgstr "심사자의 심사를 거침"
 
 msgid "Mozilla needs to contact me about my individual add-on"
 msgstr "Mozilla에서 개인적으로 사용중인 부가 기능에 관해 대화를 하길 원합니다"
@@ -6840,6 +8044,12 @@ msgstr "사용자가 신고되었습니다."
 
 msgid "new"
 msgstr "신규"
+
+msgid "Ban"
+msgstr "차단"
+
+msgid "Delete picture"
+msgstr "사진 삭제"
 
 msgid "Delete User Account"
 msgstr "사용자 계정 삭제"
@@ -6922,9 +8132,6 @@ msgstr "프로필에 노출시킬 모음집을 선택하세요."
 msgid "Display the collections I have created"
 msgstr "내가 제작한 모음집 표시"
 
-msgid "Display collections I'm following"
-msgstr "팔로우 중인 모음집 표시"
-
 msgid "Notifications"
 msgstr "알림 메시지"
 
@@ -6994,9 +8201,6 @@ msgstr "나의 가장 인기있는 테마"
 
 msgid "Themes I've created"
 msgstr "제작한 테마"
-
-msgid "Followed by Me"
-msgstr "현재 팔로우 중"
 
 # "Me" in this context is the user shown on the User Info page
 msgid "Created by Me"

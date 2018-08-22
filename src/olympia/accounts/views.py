@@ -4,8 +4,9 @@ import os
 
 from django.conf import settings
 from django.contrib.auth import login, logout
+from django.contrib.auth.signals import user_logged_in
 from django.core import signing
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models import Q
 from django.http import Http404, HttpResponseRedirect
 from django.utils.encoding import force_bytes
@@ -35,7 +36,7 @@ from olympia import amo
 from olympia.access import acl
 from olympia.access.models import GroupUser
 from olympia.amo import messages
-from olympia.amo.decorators import write
+from olympia.amo.decorators import use_primary_db
 from olympia.amo.utils import fetch_subscribed_newsletters
 from olympia.api.authentication import (
     JWTKeyAuthentication, WebTokenAuthentication)
@@ -118,11 +119,11 @@ def find_user(identity):
         raise
 
 
-def register_user(request, identity):
+def register_user(sender, request, identity):
     user = UserProfile.objects.create_user(
         email=identity['email'], username=None, fxa_id=identity['uid'])
     log.info('Created user {} from FxA'.format(user))
-    login(request, user)
+    login_user(sender, request, user, identity)
     return user
 
 
@@ -143,10 +144,10 @@ def update_user(user, identity):
         user.update(auth_id=UserProfile._meta.get_field('auth_id').default())
 
 
-def login_user(request, user, identity):
+def login_user(sender, request, user, identity):
     update_user(user, identity)
     log.info('Logging in user {} from FxA'.format(user))
-    user.log_login_attempt(True)
+    user_logged_in.send(sender=sender, request=request, user=user)
     login(request, user)
 
 
@@ -201,7 +202,7 @@ def with_user(format, config=None):
 
     def outer(fn):
         @functools.wraps(fn)
-        @write
+        @use_primary_db
         def inner(self, request):
             if config is None:
                 if hasattr(self, 'get_fxa_config'):
@@ -334,14 +335,14 @@ class AuthenticateView(FxAConfigMixin, APIView):
     @with_user(format='html')
     def get(self, request, user, identity, next_path):
         if user is None:
-            user = register_user(request, identity)
+            user = register_user(self.__class__, request, identity)
             fxa_config = self.get_fxa_config(request)
             if fxa_config.get('skip_register_redirect'):
                 response = safe_redirect(next_path, 'register')
             else:
                 response = safe_redirect(reverse('users.edit'), 'register')
         else:
-            login_user(request, user, identity)
+            login_user(self.__class__, request, user, identity)
             response = safe_redirect(next_path, 'login')
         add_api_token_to_response(response, user)
         return response
@@ -384,6 +385,9 @@ class AccountViewSet(RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin,
                 amo.permissions.USERS_EDIT)),
         }),
     ]
+    # Periods are not allowed in username, but we still have some in the
+    # database so relax the lookup regexp to allow them to load their profile.
+    lookup_value_regex = '[^/]+'
 
     def get_queryset(self):
         return UserProfile.objects.exclude(deleted=True).all()
@@ -502,7 +506,8 @@ class AccountSuperCreate(APIView):
         if group:
             GroupUser.objects.create(user=user, group=group)
 
-        login(request, user)
+        identity = {'email': email, 'uid': fxa_id}
+        login_user(self.__class__, request, user, identity)
         request.session.save()
 
         log.info(u'API user {api_user} created and logged in a user from '
@@ -567,7 +572,8 @@ class AccountNotificationViewSet(ListModelMixin, GenericViewSet):
 
         # Put it into a dict so we can easily check for existence.
         set_notifications = {
-            user_nfn.notification.short: user_nfn for user_nfn in queryset}
+            user_nfn.notification.short: user_nfn for user_nfn in queryset
+            if user_nfn.notification}
         out = []
 
         if waffle.switch_is_active('activate-basket-sync'):
