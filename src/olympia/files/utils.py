@@ -913,11 +913,6 @@ def check_xpi_info(xpi_info, addon=None, xpi_file=None, user=None):
             xpi_info.copy(), xpi_file)
         verify_mozilla_trademark(translations['name'], core.get_user())
 
-    # Parse the file to get and validate package data with the addon.
-    if not acl.submission_allowed(user, xpi_info):
-        raise forms.ValidationError(
-            ugettext(u'You cannot submit this type of add-on'))
-
     if not addon and not system_addon_submission_allowed(
             user, xpi_info):
         guids = ' or '.join(
