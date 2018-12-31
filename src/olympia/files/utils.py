@@ -428,8 +428,7 @@ class ManifestJSONExtractor(object):
             )
         else:
             apps = (
-                (amo.FIREFOX, amo.DEFAULT_WEBEXT_MIN_VERSION),
-                (amo.ANDROID, amo.DEFAULT_WEBEXT_MIN_VERSION_ANDROID),
+                (amo.THUNDERBIRD, amo.DEFAULT_WEBEXT_MIN_VERSION_THUNDERBIRD),
             )
 
         doesnt_support_no_id = (
