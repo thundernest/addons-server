@@ -448,9 +448,9 @@ class ManifestJSONExtractor(object):
         # below, but we need to be at least compatible with Firefox...)
         unsupported_no_matter_what = (
             self.strict_min_version and vint(self.strict_min_version) <
-            vint(amo.DEFAULT_WEBEXT_MIN_VERSION))
+            vint(amo.DEFAULT_WEBEXT_MIN_VERSION_THUNDERBIRD))
         if unsupported_no_matter_what:
-            msg = ugettext('Lowest supported "strict_min_version" is 42.0.')
+            msg = ugettext('Lowest supported "strict_min_version" is 60.0.')
             raise forms.ValidationError(msg)
 
         couldnt_find_version = False
