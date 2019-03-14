@@ -1,0 +1,6 @@
+-- DISABLED migration to keep Thunderbird and Seamonkey categories for ATN.
+-- Remove categories for applications others than Firefox and Firefox for
+-- Android.
+-- Removing those categories and associated m2m will hide them from the site,
+-- and prevent developers from choosing them when submitting new add-ons or
+-- editing details for an existing one.

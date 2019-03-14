@@ -22,6 +22,7 @@ from django import forms
 from django.conf import settings
 from django.core.files.storage import (
     File as DjangoFile, default_storage as storage)
+from django.template.defaultfilters import filesizeformat
 from django.utils.encoding import force_text
 from django.utils.jslex import JsLexer
 from django.utils.translation import ugettext
@@ -397,8 +398,9 @@ class ManifestJSONExtractor(object):
     @property
     def type(self):
         return (
-            amo.ADDON_LPAPP if self.get('langpack_id')
+            amo.ADDON_LPAPP if 'langpack_id' in self.data
             else amo.ADDON_STATICTHEME if 'theme' in self.data
+            else amo.ADDON_DICT if 'dictionaries' in self.data
             else amo.ADDON_EXTENSION
         )
 
@@ -426,10 +428,14 @@ class ManifestJSONExtractor(object):
             apps = (
                 (amo.FIREFOX, amo.DEFAULT_STATIC_THEME_MIN_VERSION_FIREFOX),
             )
+        elif type_ == amo.ADDON_DICT:
+            # WebExt dicts are only compatible with Firefox desktop >= 61.
+            apps = (
+                (amo.FIREFOX, amo.DEFAULT_WEBEXT_DICT_MIN_VERSION_FIREFOX),
+            )
         else:
             apps = (
-                (amo.FIREFOX, amo.DEFAULT_WEBEXT_MIN_VERSION),
-                (amo.ANDROID, amo.DEFAULT_WEBEXT_MIN_VERSION_ANDROID),
+                (amo.THUNDERBIRD, amo.DEFAULT_WEBEXT_MIN_VERSION_THUNDERBIRD),
             )
 
         doesnt_support_no_id = (
@@ -449,9 +455,9 @@ class ManifestJSONExtractor(object):
         # below, but we need to be at least compatible with Firefox...)
         unsupported_no_matter_what = (
             self.strict_min_version and vint(self.strict_min_version) <
-            vint(amo.DEFAULT_WEBEXT_MIN_VERSION))
+            vint(amo.DEFAULT_WEBEXT_MIN_VERSION_THUNDERBIRD))
         if unsupported_no_matter_what:
-            msg = ugettext('Lowest supported "strict_min_version" is 42.0.')
+            msg = ugettext('Lowest supported "strict_min_version" is 60.0.')
             raise forms.ValidationError(msg)
 
         couldnt_find_version = False
@@ -512,7 +518,7 @@ class ManifestJSONExtractor(object):
                 'name': self.get('name'),
                 'homepage': self.get('homepage_url'),
                 'summary': self.get('description'),
-                'is_restart_required': False,
+                'is_restart_required': self.get('legacy') is not None,
                 'apps': list(self.apps()),
                 'e10s_compatibility': amo.E10S_COMPATIBLE_WEBEXTENSION,
                 # Langpacks have strict compatibility enabled, rest of
@@ -905,6 +911,11 @@ def check_xpi_info(xpi_info, addon=None, xpi_file=None, user=None):
         if not waffle.switch_is_active('allow-static-theme-uploads'):
             raise forms.ValidationError(ugettext(
                 'WebExtension theme uploads are currently not supported.'))
+        max_size = settings.MAX_STATICTHEME_SIZE
+        if xpi_file and os.path.getsize(xpi_file.name) > max_size:
+            raise forms.ValidationError(
+                ugettext(u'Maximum size for WebExtension themes is {0}.')
+                .format(filesizeformat(max_size)))
 
     if xpi_file:
         # Make sure we pass in a copy of `xpi_info` since

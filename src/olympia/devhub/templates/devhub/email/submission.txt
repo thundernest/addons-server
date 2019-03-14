@@ -18,7 +18,6 @@ If you want to get involved in the Thunderbird project itself, check out our "Ge
 
 Happy developing!
 
-
 -- 
 Thunderbird Team
 https://addons.thunderbird.net
