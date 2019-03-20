@@ -1876,11 +1876,11 @@ DEFAULT_FXA_CONFIG_NAME = 'default'
 ALLOWED_FXA_CONFIGS = ['default']
 
 WEBEXT_PERM_DESCRIPTIONS_URL = (
-    'https://hg.mozilla.org/mozilla-central/raw-file/tip/'
-    'browser/locales/en-US/chrome/browser/browser.properties')
+    'https://hg.mozilla.org/comm-central/raw-file/tip/'
+    'mail/locales/en-US/chrome/messenger/addons.properties')
 WEBEXT_PERM_DESCRIPTIONS_LOCALISED_URL = (
     'https://hg.mozilla.org/l10n-central/{locale}/raw-file/tip/'
-    'browser/chrome/browser/browser.properties')
+    'mail/chrome/messenger/addons.properties')
 
 # List all jobs that should be callable with cron here.
 # syntax is: job_and_method_name: full.package.path
