@@ -526,11 +526,15 @@ class ManifestJSONExtractor(object):
             data.update(self.certinfo.parse())
 
         if not minimal:
+            restart_required = False
+            legacy = self.get('legacy')
+            if legacy is not None and ('type' not in legacy or legacy['type'] != 'bootstrap'):
+                restart_required = True
             data.update({
                 'name': self.get('name'),
                 'homepage': self.get('homepage_url'),
                 'summary': self.get('description'),
-                'is_restart_required': self.get('legacy') is not None,
+                'is_restart_required': restart_required,
                 'apps': list(self.apps()),
                 'e10s_compatibility': amo.E10S_COMPATIBLE_WEBEXTENSION,
                 # Langpacks have strict compatibility enabled, rest of
