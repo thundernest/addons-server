@@ -86,7 +86,7 @@ def update_webext_descriptions(url, locale='en-US', create=True, **kw):
             match = re.match(WEBEXTPERMS_DESCRIPTION_REGEX, line)
             if match:
                 (perm, description) = match.groups()
-                description = description.replace('%S', u'Firefox')
+                description = description.replace('%S', u'Thunderbird')
                 if create:
                     log.info(u'Adding permission "%s" = "%s"' %
                              (perm, description))
